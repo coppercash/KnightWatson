@@ -12,6 +12,8 @@
     @private
     id<NSCopying>
     _theme;
+    NSHashTable
+    *_themableObjects;
 }
 
 + (instancetype)sharedThemeContext;

@@ -13,6 +13,7 @@
     *_valuesByTheme;
 }
 
+@property (readonly) NSDictionary *valuesByTheme;
 - (instancetype)initWithValuesByTheme:(NSDictionary *)values;
 
 @end

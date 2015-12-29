@@ -55,4 +55,55 @@
     XCTAssertEqualObjects(UIColor.whiteColor, view.backgroundColor);
 }
 
+- (void)testAPI2 {
+    UIView
+    *view = [[UIView alloc] init];
+    
+    view.kw_themable.backgroundColor = (UIColor *)[[KWThemeValue alloc] initWithValuesByTheme:
+                                                   @{
+                                                     @"A": UIColor.whiteColor,
+                                                     @"B": UIColor.blackColor
+                                                     }];
+    
+    [[KWThemeContext sharedThemeContext] setTheme:@"A"];
+    XCTAssertEqualObjects(UIColor.whiteColor, view.backgroundColor);
+    [[KWThemeContext sharedThemeContext] setTheme:@"B"];
+    XCTAssertEqualObjects(UIColor.blackColor, view.backgroundColor);
+}
+
+- (void)testAPI3 {
+    UIView
+    *view = [[UIView alloc] init];
+    UIView __weak
+    *deallocTester = view;
+    
+    view.kw_themable.backgroundColor = (UIColor *)[[KWThemeValue alloc] initWithValuesByTheme:
+                                                   @{
+                                                     @"A": UIColor.whiteColor,
+                                                     @"B": UIColor.blackColor
+                                                     }];
+    view = nil;
+    
+    XCTAssertNil(deallocTester);
+}
+
+- (void)testAPI4 {
+    UIButton
+    *view = [[UIButton alloc] init];
+    
+    KWThemeValue
+    *color = [[KWThemeValue alloc] initWithValuesByTheme:
+              @{
+                @"A": UIColor.whiteColor,
+                @"B": UIColor.blackColor
+                }];
+    [view.kw_themable setTitleColor:(UIColor *)color
+                           forState:UIControlStateHighlighted];
+    
+    [[KWThemeContext sharedThemeContext] setTheme:@"A"];
+    XCTAssertEqualObjects(UIColor.whiteColor, [view titleColorForState:UIControlStateHighlighted]);
+    [[KWThemeContext sharedThemeContext] setTheme:@"B"];
+    XCTAssertEqualObjects(UIColor.blackColor, [view titleColorForState:UIControlStateHighlighted]);
+}
+
 @end

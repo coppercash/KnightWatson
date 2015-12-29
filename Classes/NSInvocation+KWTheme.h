@@ -1,5 +1,5 @@
 //
-//  NSObject+KWTheme.h
+//  NSInvocation+KWTheme.h
 //  KWTheme
 //
 //  Created by William on 12/29/15.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (KWTheme)
+@interface NSInvocation (KWTheme)
 
-- (instancetype)kw_themed;
-- (instancetype)kw_themable;
+- (instancetype)kw_copy;
+- (void)kw_invokeWithTarget:(id)target theme:(id<NSCopying>)theme;
 
 @end

@@ -9,10 +9,11 @@
 #import "KWThemeValue.h"
 
 @implementation KWThemeValue
+@synthesize valuesByTheme = _valuesByTheme;
 
 - (instancetype)initWithValuesByTheme:(NSDictionary *)values {
     if (self = [super init]) {
-        
+        _valuesByTheme = values;
     }
     return self;
 }

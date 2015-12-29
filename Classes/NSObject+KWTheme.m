@@ -8,10 +8,17 @@
 
 #import "NSObject+KWTheme.h"
 
+#import "KWThemedObjectProxy.h"
+#import "KWThemableObjectProxy.h"
+
 @implementation NSObject (KWTheme)
 
 - (instancetype)kw_themed {
-    
+    return (NSObject *)[[KWThemedObjectProxy alloc] initWithTarget:self];
+}
+
+- (instancetype)kw_themable {
+    return (NSObject *)[[KWThemableObjectProxy alloc] initWithTarget:self];
 }
 
 @end

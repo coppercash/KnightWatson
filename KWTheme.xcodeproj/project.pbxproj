@@ -16,6 +16,12 @@
 		BEC95E571C32C28800BA7237 /* KWThemeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E551C32C28800BA7237 /* KWThemeValue.m */; };
 		BEC95E5A1C32C4D600BA7237 /* NSObject+KWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */; };
 		BEC95E5B1C32C4D600BA7237 /* NSObject+KWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */; };
+		BEC95E5F1C32CA1900BA7237 /* KWThemedObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E5D1C32CA1900BA7237 /* KWThemedObjectProxy.h */; };
+		BEC95E601C32CA1900BA7237 /* KWThemedObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E5E1C32CA1900BA7237 /* KWThemedObjectProxy.m */; };
+		BEC95E631C32D5BF00BA7237 /* KWThemableObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E611C32D5BF00BA7237 /* KWThemableObjectProxy.h */; };
+		BEC95E641C32D5BF00BA7237 /* KWThemableObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E621C32D5BF00BA7237 /* KWThemableObjectProxy.m */; };
+		BEC95E671C32DFEF00BA7237 /* NSInvocation+KWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E651C32DFEF00BA7237 /* NSInvocation+KWTheme.h */; };
+		BEC95E681C32DFEF00BA7237 /* NSInvocation+KWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E661C32DFEF00BA7237 /* NSInvocation+KWTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,12 @@
 		BEC95E551C32C28800BA7237 /* KWThemeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemeValue.m; sourceTree = "<group>"; };
 		BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KWTheme.h"; sourceTree = "<group>"; };
 		BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KWTheme.m"; sourceTree = "<group>"; };
+		BEC95E5D1C32CA1900BA7237 /* KWThemedObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWThemedObjectProxy.h; sourceTree = "<group>"; };
+		BEC95E5E1C32CA1900BA7237 /* KWThemedObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemedObjectProxy.m; sourceTree = "<group>"; };
+		BEC95E611C32D5BF00BA7237 /* KWThemableObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWThemableObjectProxy.h; sourceTree = "<group>"; };
+		BEC95E621C32D5BF00BA7237 /* KWThemableObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemableObjectProxy.m; sourceTree = "<group>"; };
+		BEC95E651C32DFEF00BA7237 /* NSInvocation+KWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+KWTheme.h"; sourceTree = "<group>"; };
+		BEC95E661C32DFEF00BA7237 /* NSInvocation+KWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+KWTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,12 @@
 				BEC95E551C32C28800BA7237 /* KWThemeValue.m */,
 				BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */,
 				BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */,
+				BEC95E5D1C32CA1900BA7237 /* KWThemedObjectProxy.h */,
+				BEC95E5E1C32CA1900BA7237 /* KWThemedObjectProxy.m */,
+				BEC95E611C32D5BF00BA7237 /* KWThemableObjectProxy.h */,
+				BEC95E621C32D5BF00BA7237 /* KWThemableObjectProxy.m */,
+				BEC95E651C32DFEF00BA7237 /* NSInvocation+KWTheme.h */,
+				BEC95E661C32DFEF00BA7237 /* NSInvocation+KWTheme.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -121,8 +139,11 @@
 			files = (
 				BEC95E5A1C32C4D600BA7237 /* NSObject+KWTheme.h in Headers */,
 				BEC95E561C32C28800BA7237 /* KWThemeValue.h in Headers */,
+				BEC95E671C32DFEF00BA7237 /* NSInvocation+KWTheme.h in Headers */,
 				BEC95E4D1C32C0FA00BA7237 /* KWThemeContext.h in Headers */,
 				BEC95E341C32BE7600BA7237 /* KWTheme.h in Headers */,
+				BEC95E631C32D5BF00BA7237 /* KWThemableObjectProxy.h in Headers */,
+				BEC95E5F1C32CA1900BA7237 /* KWThemedObjectProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,8 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC95E681C32DFEF00BA7237 /* NSInvocation+KWTheme.m in Sources */,
 				BEC95E5B1C32C4D600BA7237 /* NSObject+KWTheme.m in Sources */,
+				BEC95E601C32CA1900BA7237 /* KWThemedObjectProxy.m in Sources */,
 				BEC95E4E1C32C0FA00BA7237 /* KWThemeContext.m in Sources */,
+				BEC95E641C32D5BF00BA7237 /* KWThemableObjectProxy.m in Sources */,
 				BEC95E571C32C28800BA7237 /* KWThemeValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
