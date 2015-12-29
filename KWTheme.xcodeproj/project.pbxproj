@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEC95E341C32BE7600BA7237 /* KWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E331C32BE7600BA7237 /* KWTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEC95E3B1C32BE7600BA7237 /* KWTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC95E301C32BE7600BA7237 /* KWTheme.framework */; };
+		BEC95E401C32BE7600BA7237 /* KWThemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E3F1C32BE7600BA7237 /* KWThemeTests.m */; };
+		BEC95E4D1C32C0FA00BA7237 /* KWThemeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E4B1C32C0FA00BA7237 /* KWThemeContext.h */; };
+		BEC95E4E1C32C0FA00BA7237 /* KWThemeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E4C1C32C0FA00BA7237 /* KWThemeContext.m */; };
+		BEC95E561C32C28800BA7237 /* KWThemeValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E541C32C28800BA7237 /* KWThemeValue.h */; };
+		BEC95E571C32C28800BA7237 /* KWThemeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E551C32C28800BA7237 /* KWThemeValue.m */; };
+		BEC95E5A1C32C4D600BA7237 /* NSObject+KWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */; };
+		BEC95E5B1C32C4D600BA7237 /* NSObject+KWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEC95E3C1C32BE7600BA7237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEC95E271C32BE7600BA7237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEC95E2F1C32BE7600BA7237;
+			remoteInfo = KWTheme;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BEC95E301C32BE7600BA7237 /* KWTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC95E331C32BE7600BA7237 /* KWTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWTheme.h; sourceTree = "<group>"; };
+		BEC95E351C32BE7600BA7237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC95E3A1C32BE7600BA7237 /* KWThemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWThemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC95E3F1C32BE7600BA7237 /* KWThemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWThemeTests.m; sourceTree = "<group>"; };
+		BEC95E411C32BE7600BA7237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC95E4B1C32C0FA00BA7237 /* KWThemeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWThemeContext.h; sourceTree = "<group>"; };
+		BEC95E4C1C32C0FA00BA7237 /* KWThemeContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemeContext.m; sourceTree = "<group>"; };
+		BEC95E541C32C28800BA7237 /* KWThemeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWThemeValue.h; sourceTree = "<group>"; };
+		BEC95E551C32C28800BA7237 /* KWThemeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemeValue.m; sourceTree = "<group>"; };
+		BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KWTheme.h"; sourceTree = "<group>"; };
+		BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KWTheme.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEC95E2C1C32BE7600BA7237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC95E371C32BE7600BA7237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC95E3B1C32BE7600BA7237 /* KWTheme.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEC95E261C32BE7600BA7237 = {
+			isa = PBXGroup;
+			children = (
+				BEC95E4A1C32C0D200BA7237 /* Classes */,
+				BEC95E321C32BE7600BA7237 /* KWTheme */,
+				BEC95E3E1C32BE7600BA7237 /* KWThemeTests */,
+				BEC95E311C32BE7600BA7237 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEC95E311C32BE7600BA7237 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEC95E301C32BE7600BA7237 /* KWTheme.framework */,
+				BEC95E3A1C32BE7600BA7237 /* KWThemeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEC95E321C32BE7600BA7237 /* KWTheme */ = {
+			isa = PBXGroup;
+			children = (
+				BEC95E331C32BE7600BA7237 /* KWTheme.h */,
+				BEC95E351C32BE7600BA7237 /* Info.plist */,
+			);
+			path = KWTheme;
+			sourceTree = "<group>";
+		};
+		BEC95E3E1C32BE7600BA7237 /* KWThemeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEC95E3F1C32BE7600BA7237 /* KWThemeTests.m */,
+				BEC95E411C32BE7600BA7237 /* Info.plist */,
+			);
+			path = KWThemeTests;
+			sourceTree = "<group>";
+		};
+		BEC95E4A1C32C0D200BA7237 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BEC95E4B1C32C0FA00BA7237 /* KWThemeContext.h */,
+				BEC95E4C1C32C0FA00BA7237 /* KWThemeContext.m */,
+				BEC95E541C32C28800BA7237 /* KWThemeValue.h */,
+				BEC95E551C32C28800BA7237 /* KWThemeValue.m */,
+				BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */,
+				BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BEC95E2D1C32BE7600BA7237 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC95E5A1C32C4D600BA7237 /* NSObject+KWTheme.h in Headers */,
+				BEC95E561C32C28800BA7237 /* KWThemeValue.h in Headers */,
+				BEC95E4D1C32C0FA00BA7237 /* KWThemeContext.h in Headers */,
+				BEC95E341C32BE7600BA7237 /* KWTheme.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BEC95E2F1C32BE7600BA7237 /* KWTheme */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC95E441C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KWTheme" */;
+			buildPhases = (
+				BEC95E2B1C32BE7600BA7237 /* Sources */,
+				BEC95E2C1C32BE7600BA7237 /* Frameworks */,
+				BEC95E2D1C32BE7600BA7237 /* Headers */,
+				BEC95E2E1C32BE7600BA7237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KWTheme;
+			productName = KWTheme;
+			productReference = BEC95E301C32BE7600BA7237 /* KWTheme.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BEC95E391C32BE7600BA7237 /* KWThemeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC95E471C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KWThemeTests" */;
+			buildPhases = (
+				BEC95E361C32BE7600BA7237 /* Sources */,
+				BEC95E371C32BE7600BA7237 /* Frameworks */,
+				BEC95E381C32BE7600BA7237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEC95E3D1C32BE7600BA7237 /* PBXTargetDependency */,
+			);
+			name = KWThemeTests;
+			productName = KWThemeTests;
+			productReference = BEC95E3A1C32BE7600BA7237 /* KWThemeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEC95E271C32BE7600BA7237 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = coppercash;
+				TargetAttributes = {
+					BEC95E2F1C32BE7600BA7237 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					BEC95E391C32BE7600BA7237 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = BEC95E2A1C32BE7600BA7237 /* Build configuration list for PBXProject "KWTheme" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BEC95E261C32BE7600BA7237;
+			productRefGroup = BEC95E311C32BE7600BA7237 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEC95E2F1C32BE7600BA7237 /* KWTheme */,
+				BEC95E391C32BE7600BA7237 /* KWThemeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEC95E2E1C32BE7600BA7237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC95E381C32BE7600BA7237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEC95E2B1C32BE7600BA7237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC95E5B1C32C4D600BA7237 /* NSObject+KWTheme.m in Sources */,
+				BEC95E4E1C32C0FA00BA7237 /* KWThemeContext.m in Sources */,
+				BEC95E571C32C28800BA7237 /* KWThemeValue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC95E361C32BE7600BA7237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC95E401C32BE7600BA7237 /* KWThemeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEC95E3D1C32BE7600BA7237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEC95E2F1C32BE7600BA7237 /* KWTheme */;
+			targetProxy = BEC95E3C1C32BE7600BA7237 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BEC95E421C32BE7600BA7237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEC95E431C32BE7600BA7237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BEC95E451C32BE7600BA7237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KWTheme/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.coppercash.KWTheme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BEC95E461C32BE7600BA7237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KWTheme/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.coppercash.KWTheme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BEC95E481C32BE7600BA7237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KWThemeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.coppercash.KWThemeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BEC95E491C32BE7600BA7237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KWThemeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.coppercash.KWThemeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEC95E2A1C32BE7600BA7237 /* Build configuration list for PBXProject "KWTheme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC95E421C32BE7600BA7237 /* Debug */,
+				BEC95E431C32BE7600BA7237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC95E441C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KWTheme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC95E451C32BE7600BA7237 /* Debug */,
+				BEC95E461C32BE7600BA7237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC95E471C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KWThemeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC95E481C32BE7600BA7237 /* Debug */,
+				BEC95E491C32BE7600BA7237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEC95E271C32BE7600BA7237 /* Project object */;
+}
