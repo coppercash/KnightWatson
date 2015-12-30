@@ -1,6 +1,6 @@
 //
-//  KWThemedObjectProxy.h
-//  KWTheme
+//  KNWThemedObjectProxy.h
+//  KNWTheme
 //
 //  Created by William on 12/29/15.
 //  Copyright © 2015 coppercash. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KWThemedObjectProxy : NSProxy {
+@interface KNWThemedObjectProxy : NSProxy {
     NSObject __unsafe_unretained
     *_target;
 }

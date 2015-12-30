@@ -1,27 +1,28 @@
 //
-//  KWThemeContext.m
-//  KWTheme
+//  KNWThemeContext.m
+//  KNWTheme
 //
 //  Created by William on 12/29/15.
 //  Copyright © 2015 coppercash. All rights reserved.
 //
 
-#import "KWThemeContext.h"
+#import "KNWThemeContext.h"
 
-#import "NSObject+KWTheme.h"
-#import "NSInvocation+KWTheme.h"
+#import "NSObject+KNWTheme.h"
+#import "NSInvocation+KNWTheme.h"
 
 #import <objc/runtime.h>
 
-@interface NSObject (KWThemableObjectProxy)
-@property (readonly) NSMutableDictionary *kw_invocationsByMethod;
+@interface NSObject (KNWThemableObjectProxy)
+@property (readonly) NSMutableDictionary *knw_invocationsByMethod;
 @end
 
-@implementation KWThemeContext
+@implementation KNWThemeContext
+@dynamic theme;
 
 + (instancetype)sharedThemeContext
 {
-    KWThemeContext static
+    KNWThemeContext static
     *_instance = nil;
     dispatch_once_t static
     _predicate;
@@ -39,16 +40,23 @@
     return self;
 }
 
+#pragma mark - Theme
+
 - (void)setTheme:(id<NSCopying>)theme
 {
     _theme = theme;
     
     for (NSObject *object in _themableObjects) {
-        for (NSInvocation *invocation in object.kw_invocationsByMethod.allValues) {
-            [invocation.kw_copy kw_invokeWithTarget:object
-                                      theme:theme];
+        for (NSInvocation *invocation in object.knw_invocationsByMethod.allValues) {
+            [invocation.knw_methodArgumentsCopy knw_invokeWithTarget:object
+                                                               theme:theme];
         }
     }
+}
+
+- (id<NSCopying>)theme
+{
+    return _theme;;
 }
 
 #pragma mark -
@@ -70,14 +78,14 @@
     
     // Map retained invocation by selector on object
     //
-    object.kw_invocationsByMethod[NSStringFromSelector(invocation.selector)] = invocation;
+    object.knw_invocationsByMethod[NSStringFromSelector(invocation.selector)] = invocation;
 }
 
 @end
 
-@implementation NSObject (KWThemableObjectProxy)
+@implementation NSObject (KNWThemableObjectProxy)
 
-- (NSMutableDictionary *)kw_invocationsByMethod {
+- (NSMutableDictionary *)knw_invocationsByMethod {
     NSMutableDictionary
     *invocations = objc_getAssociatedObject(self, _cmd);
     if (nil == invocations) {

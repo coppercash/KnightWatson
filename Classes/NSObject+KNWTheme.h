@@ -1,6 +1,6 @@
 //
-//  NSObject+KWTheme.h
-//  KWTheme
+//  NSObject+KNWTheme.h
+//  KNWTheme
 //
 //  Created by William on 12/29/15.
 //  Copyright © 2015 coppercash. All rights reserved.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (KWTheme)
+@interface NSObject (KNWTheme)
 
-- (instancetype)kw_themed;
-- (instancetype)kw_themable;
+- (instancetype)knw_themed;
+- (instancetype)knw_themable;
 
 @end

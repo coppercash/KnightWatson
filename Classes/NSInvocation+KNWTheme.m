@@ -1,41 +1,46 @@
 //
-//  NSInvocation+KWTheme.m
-//  KWTheme
+//  NSInvocation+KNWTheme.m
+//  KNWTheme
 //
 //  Created by William on 12/29/15.
 //  Copyright © 2015 coppercash. All rights reserved.
 //
 
-#import "NSInvocation+KWTheme.h"
+#import "NSInvocation+KNWTheme.h"
 
-#import "KWThemeValue.h"
+#import "KNWThemeValue.h"
 
-@implementation NSInvocation (KWTheme)
+@implementation NSInvocation (KNWTheme)
 
-- (void)kw_invokeWithTarget:(id)target
+- (void)knw_invokeWithTarget:(id)target
                       theme:(id<NSCopying>)theme
 {
-    for (NSUInteger index = 2; index < self.methodSignature.numberOfArguments; index++) {
+    NSMethodSignature
+    *signature = self.methodSignature;
+    for (NSUInteger index = 2; index < signature.numberOfArguments; index++) {
+        char const
+        *type = [signature getArgumentTypeAtIndex:index];
+        if (0 != strcmp("@", type)) { continue; }
+        
         id __unsafe_unretained
         argument;
         [self getArgument:&argument
                   atIndex:index];
-        if ([argument isKindOfClass:KWThemeValue.class]) {
-            id
-            value = [(KWThemeValue *)argument valuesByTheme][theme];
-            [self setArgument:&value
-                      atIndex:index];
-        }
+        if (NO == [argument isKindOfClass:KNWThemeValue.class]) { continue; }
+        
+        id
+        value = [(KNWThemeValue *)argument valuesByTheme][theme];
+        [self setArgument:&value
+                  atIndex:index];
     }
     
     [self invokeWithTarget:target];
 }
 
-- (instancetype)kw_copy
+- (instancetype)knw_methodArgumentsCopy
 {
     NSInvocation
     *invocation = [NSInvocation invocationWithMethodSignature:self.methodSignature];
-    invocation.target = self.target;
     invocation.selector = self.selector;
     
     for (NSUInteger index = 2; index < self.methodSignature.numberOfArguments; index++) {
@@ -45,10 +50,6 @@
                   atIndex:index];
         [invocation setArgument:&argument
                         atIndex:index];
-    }
-    
-    if (self.argumentsRetained) {
-        [invocation retainArguments];
     }
     
     return invocation;

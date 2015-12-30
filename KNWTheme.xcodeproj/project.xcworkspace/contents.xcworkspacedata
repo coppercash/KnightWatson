@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:KWTheme.xcodeproj">
+      location = "self:/Users/will/Documents/projects/KnightWatson/KNWTheme.xcodeproj">
    </FileRef>
 </Workspace>

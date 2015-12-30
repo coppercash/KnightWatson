@@ -1,17 +1,17 @@
 //
-//  KWThemedObjectProxy.m
-//  KWTheme
+//  KNWThemedObjectProxy.m
+//  KNWTheme
 //
 //  Created by William on 12/29/15.
 //  Copyright © 2015 coppercash. All rights reserved.
 //
 
-#import "KWThemedObjectProxy.h"
+#import "KNWThemedObjectProxy.h"
 
-#import "KWThemeContext.h"
-#import "NSInvocation+KWTheme.h"
+#import "KNWThemeContext.h"
+#import "NSInvocation+KNWTheme.h"
 
-@implementation KWThemedObjectProxy
+@implementation KNWThemedObjectProxy
 
 - (instancetype)initWithTarget:(NSObject *)target
 {
@@ -21,8 +21,8 @@
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-    [invocation kw_invokeWithTarget:_target
-                              theme:KWThemeContext.sharedThemeContext.theme];
+    [invocation knw_invokeWithTarget:_target
+                              theme:KNWThemeContext.sharedThemeContext.theme];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel

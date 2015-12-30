@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BEC95E341C32BE7600BA7237 /* KWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E331C32BE7600BA7237 /* KWTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BEC95E3B1C32BE7600BA7237 /* KWTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC95E301C32BE7600BA7237 /* KWTheme.framework */; };
-		BEC95E401C32BE7600BA7237 /* KWThemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E3F1C32BE7600BA7237 /* KWThemeTests.m */; };
-		BEC95E4D1C32C0FA00BA7237 /* KWThemeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E4B1C32C0FA00BA7237 /* KWThemeContext.h */; };
-		BEC95E4E1C32C0FA00BA7237 /* KWThemeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E4C1C32C0FA00BA7237 /* KWThemeContext.m */; };
-		BEC95E561C32C28800BA7237 /* KWThemeValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E541C32C28800BA7237 /* KWThemeValue.h */; };
-		BEC95E571C32C28800BA7237 /* KWThemeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E551C32C28800BA7237 /* KWThemeValue.m */; };
-		BEC95E5A1C32C4D600BA7237 /* NSObject+KWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */; };
-		BEC95E5B1C32C4D600BA7237 /* NSObject+KWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */; };
-		BEC95E5F1C32CA1900BA7237 /* KWThemedObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E5D1C32CA1900BA7237 /* KWThemedObjectProxy.h */; };
-		BEC95E601C32CA1900BA7237 /* KWThemedObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E5E1C32CA1900BA7237 /* KWThemedObjectProxy.m */; };
-		BEC95E631C32D5BF00BA7237 /* KWThemableObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E611C32D5BF00BA7237 /* KWThemableObjectProxy.h */; };
-		BEC95E641C32D5BF00BA7237 /* KWThemableObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E621C32D5BF00BA7237 /* KWThemableObjectProxy.m */; };
-		BEC95E671C32DFEF00BA7237 /* NSInvocation+KWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E651C32DFEF00BA7237 /* NSInvocation+KWTheme.h */; };
-		BEC95E681C32DFEF00BA7237 /* NSInvocation+KWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E661C32DFEF00BA7237 /* NSInvocation+KWTheme.m */; };
+		BEC95E341C32BE7600BA7237 /* KNWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E331C32BE7600BA7237 /* KNWTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEC95E3B1C32BE7600BA7237 /* KNWTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC95E301C32BE7600BA7237 /* KNWTheme.framework */; };
+		BEC95E401C32BE7600BA7237 /* KNWThemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E3F1C32BE7600BA7237 /* KNWThemeTests.m */; };
+		BEC95E4D1C32C0FA00BA7237 /* KNWThemeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E4B1C32C0FA00BA7237 /* KNWThemeContext.h */; };
+		BEC95E4E1C32C0FA00BA7237 /* KNWThemeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E4C1C32C0FA00BA7237 /* KNWThemeContext.m */; };
+		BEC95E561C32C28800BA7237 /* KNWThemeValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E541C32C28800BA7237 /* KNWThemeValue.h */; };
+		BEC95E571C32C28800BA7237 /* KNWThemeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E551C32C28800BA7237 /* KNWThemeValue.m */; };
+		BEC95E5A1C32C4D600BA7237 /* NSObject+KNWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E581C32C4D600BA7237 /* NSObject+KNWTheme.h */; };
+		BEC95E5B1C32C4D600BA7237 /* NSObject+KNWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E591C32C4D600BA7237 /* NSObject+KNWTheme.m */; };
+		BEC95E5F1C32CA1900BA7237 /* KNWThemedObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E5D1C32CA1900BA7237 /* KNWThemedObjectProxy.h */; };
+		BEC95E601C32CA1900BA7237 /* KNWThemedObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E5E1C32CA1900BA7237 /* KNWThemedObjectProxy.m */; };
+		BEC95E631C32D5BF00BA7237 /* KNWThemableObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E611C32D5BF00BA7237 /* KNWThemableObjectProxy.h */; };
+		BEC95E641C32D5BF00BA7237 /* KNWThemableObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E621C32D5BF00BA7237 /* KNWThemableObjectProxy.m */; };
+		BEC95E671C32DFEF00BA7237 /* NSInvocation+KNWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E651C32DFEF00BA7237 /* NSInvocation+KNWTheme.h */; };
+		BEC95E681C32DFEF00BA7237 /* NSInvocation+KNWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E661C32DFEF00BA7237 /* NSInvocation+KNWTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,24 +35,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BEC95E301C32BE7600BA7237 /* KWTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC95E331C32BE7600BA7237 /* KWTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWTheme.h; sourceTree = "<group>"; };
+		BEC95E301C32BE7600BA7237 /* KNWTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KNWTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC95E331C32BE7600BA7237 /* KNWTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNWTheme.h; sourceTree = "<group>"; };
 		BEC95E351C32BE7600BA7237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEC95E3A1C32BE7600BA7237 /* KWThemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWThemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC95E3F1C32BE7600BA7237 /* KWThemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWThemeTests.m; sourceTree = "<group>"; };
+		BEC95E3A1C32BE7600BA7237 /* KNWTheme.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KNWTheme.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC95E3F1C32BE7600BA7237 /* KNWThemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNWThemeTests.m; sourceTree = "<group>"; };
 		BEC95E411C32BE7600BA7237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEC95E4B1C32C0FA00BA7237 /* KWThemeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWThemeContext.h; sourceTree = "<group>"; };
-		BEC95E4C1C32C0FA00BA7237 /* KWThemeContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemeContext.m; sourceTree = "<group>"; };
-		BEC95E541C32C28800BA7237 /* KWThemeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWThemeValue.h; sourceTree = "<group>"; };
-		BEC95E551C32C28800BA7237 /* KWThemeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemeValue.m; sourceTree = "<group>"; };
-		BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KWTheme.h"; sourceTree = "<group>"; };
-		BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KWTheme.m"; sourceTree = "<group>"; };
-		BEC95E5D1C32CA1900BA7237 /* KWThemedObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWThemedObjectProxy.h; sourceTree = "<group>"; };
-		BEC95E5E1C32CA1900BA7237 /* KWThemedObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemedObjectProxy.m; sourceTree = "<group>"; };
-		BEC95E611C32D5BF00BA7237 /* KWThemableObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWThemableObjectProxy.h; sourceTree = "<group>"; };
-		BEC95E621C32D5BF00BA7237 /* KWThemableObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWThemableObjectProxy.m; sourceTree = "<group>"; };
-		BEC95E651C32DFEF00BA7237 /* NSInvocation+KWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+KWTheme.h"; sourceTree = "<group>"; };
-		BEC95E661C32DFEF00BA7237 /* NSInvocation+KWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+KWTheme.m"; sourceTree = "<group>"; };
+		BEC95E4B1C32C0FA00BA7237 /* KNWThemeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemeContext.h; sourceTree = "<group>"; };
+		BEC95E4C1C32C0FA00BA7237 /* KNWThemeContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemeContext.m; sourceTree = "<group>"; };
+		BEC95E541C32C28800BA7237 /* KNWThemeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemeValue.h; sourceTree = "<group>"; };
+		BEC95E551C32C28800BA7237 /* KNWThemeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemeValue.m; sourceTree = "<group>"; };
+		BEC95E581C32C4D600BA7237 /* NSObject+KNWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KNWTheme.h"; sourceTree = "<group>"; };
+		BEC95E591C32C4D600BA7237 /* NSObject+KNWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KNWTheme.m"; sourceTree = "<group>"; };
+		BEC95E5D1C32CA1900BA7237 /* KNWThemedObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemedObjectProxy.h; sourceTree = "<group>"; };
+		BEC95E5E1C32CA1900BA7237 /* KNWThemedObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemedObjectProxy.m; sourceTree = "<group>"; };
+		BEC95E611C32D5BF00BA7237 /* KNWThemableObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemableObjectProxy.h; sourceTree = "<group>"; };
+		BEC95E621C32D5BF00BA7237 /* KNWThemableObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemableObjectProxy.m; sourceTree = "<group>"; };
+		BEC95E651C32DFEF00BA7237 /* NSInvocation+KNWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+KNWTheme.h"; sourceTree = "<group>"; };
+		BEC95E661C32DFEF00BA7237 /* NSInvocation+KNWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+KNWTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC95E3B1C32BE7600BA7237 /* KWTheme.framework in Frameworks */,
+				BEC95E3B1C32BE7600BA7237 /* KNWTheme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				BEC95E4A1C32C0D200BA7237 /* Classes */,
-				BEC95E321C32BE7600BA7237 /* KWTheme */,
-				BEC95E3E1C32BE7600BA7237 /* KWThemeTests */,
+				BEC95E321C32BE7600BA7237 /* KNWTheme */,
+				BEC95E3E1C32BE7600BA7237 /* KNWThemeTests */,
 				BEC95E311C32BE7600BA7237 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,45 +87,45 @@
 		BEC95E311C32BE7600BA7237 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEC95E301C32BE7600BA7237 /* KWTheme.framework */,
-				BEC95E3A1C32BE7600BA7237 /* KWThemeTests.xctest */,
+				BEC95E301C32BE7600BA7237 /* KNWTheme.framework */,
+				BEC95E3A1C32BE7600BA7237 /* KNWTheme.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BEC95E321C32BE7600BA7237 /* KWTheme */ = {
+		BEC95E321C32BE7600BA7237 /* KNWTheme */ = {
 			isa = PBXGroup;
 			children = (
-				BEC95E331C32BE7600BA7237 /* KWTheme.h */,
+				BEC95E331C32BE7600BA7237 /* KNWTheme.h */,
 				BEC95E351C32BE7600BA7237 /* Info.plist */,
 			);
-			path = KWTheme;
+			path = KNWTheme;
 			sourceTree = "<group>";
 		};
-		BEC95E3E1C32BE7600BA7237 /* KWThemeTests */ = {
+		BEC95E3E1C32BE7600BA7237 /* KNWThemeTests */ = {
 			isa = PBXGroup;
 			children = (
-				BEC95E3F1C32BE7600BA7237 /* KWThemeTests.m */,
+				BEC95E3F1C32BE7600BA7237 /* KNWThemeTests.m */,
 				BEC95E411C32BE7600BA7237 /* Info.plist */,
 			);
-			path = KWThemeTests;
+			path = KNWThemeTests;
 			sourceTree = "<group>";
 		};
 		BEC95E4A1C32C0D200BA7237 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BEC95E4B1C32C0FA00BA7237 /* KWThemeContext.h */,
-				BEC95E4C1C32C0FA00BA7237 /* KWThemeContext.m */,
-				BEC95E541C32C28800BA7237 /* KWThemeValue.h */,
-				BEC95E551C32C28800BA7237 /* KWThemeValue.m */,
-				BEC95E581C32C4D600BA7237 /* NSObject+KWTheme.h */,
-				BEC95E591C32C4D600BA7237 /* NSObject+KWTheme.m */,
-				BEC95E5D1C32CA1900BA7237 /* KWThemedObjectProxy.h */,
-				BEC95E5E1C32CA1900BA7237 /* KWThemedObjectProxy.m */,
-				BEC95E611C32D5BF00BA7237 /* KWThemableObjectProxy.h */,
-				BEC95E621C32D5BF00BA7237 /* KWThemableObjectProxy.m */,
-				BEC95E651C32DFEF00BA7237 /* NSInvocation+KWTheme.h */,
-				BEC95E661C32DFEF00BA7237 /* NSInvocation+KWTheme.m */,
+				BEC95E4B1C32C0FA00BA7237 /* KNWThemeContext.h */,
+				BEC95E4C1C32C0FA00BA7237 /* KNWThemeContext.m */,
+				BEC95E541C32C28800BA7237 /* KNWThemeValue.h */,
+				BEC95E551C32C28800BA7237 /* KNWThemeValue.m */,
+				BEC95E581C32C4D600BA7237 /* NSObject+KNWTheme.h */,
+				BEC95E591C32C4D600BA7237 /* NSObject+KNWTheme.m */,
+				BEC95E5D1C32CA1900BA7237 /* KNWThemedObjectProxy.h */,
+				BEC95E5E1C32CA1900BA7237 /* KNWThemedObjectProxy.m */,
+				BEC95E611C32D5BF00BA7237 /* KNWThemableObjectProxy.h */,
+				BEC95E621C32D5BF00BA7237 /* KNWThemableObjectProxy.m */,
+				BEC95E651C32DFEF00BA7237 /* NSInvocation+KNWTheme.h */,
+				BEC95E661C32DFEF00BA7237 /* NSInvocation+KNWTheme.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -137,22 +137,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC95E5A1C32C4D600BA7237 /* NSObject+KWTheme.h in Headers */,
-				BEC95E561C32C28800BA7237 /* KWThemeValue.h in Headers */,
-				BEC95E671C32DFEF00BA7237 /* NSInvocation+KWTheme.h in Headers */,
-				BEC95E4D1C32C0FA00BA7237 /* KWThemeContext.h in Headers */,
-				BEC95E341C32BE7600BA7237 /* KWTheme.h in Headers */,
-				BEC95E631C32D5BF00BA7237 /* KWThemableObjectProxy.h in Headers */,
-				BEC95E5F1C32CA1900BA7237 /* KWThemedObjectProxy.h in Headers */,
+				BEC95E5A1C32C4D600BA7237 /* NSObject+KNWTheme.h in Headers */,
+				BEC95E561C32C28800BA7237 /* KNWThemeValue.h in Headers */,
+				BEC95E671C32DFEF00BA7237 /* NSInvocation+KNWTheme.h in Headers */,
+				BEC95E4D1C32C0FA00BA7237 /* KNWThemeContext.h in Headers */,
+				BEC95E341C32BE7600BA7237 /* KNWTheme.h in Headers */,
+				BEC95E631C32D5BF00BA7237 /* KNWThemableObjectProxy.h in Headers */,
+				BEC95E5F1C32CA1900BA7237 /* KNWThemedObjectProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BEC95E2F1C32BE7600BA7237 /* KWTheme */ = {
+		BEC95E2F1C32BE7600BA7237 /* KNWTheme */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEC95E441C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KWTheme" */;
+			buildConfigurationList = BEC95E441C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KNWTheme" */;
 			buildPhases = (
 				BEC95E2B1C32BE7600BA7237 /* Sources */,
 				BEC95E2C1C32BE7600BA7237 /* Frameworks */,
@@ -163,14 +163,14 @@
 			);
 			dependencies = (
 			);
-			name = KWTheme;
+			name = KNWTheme;
 			productName = KWTheme;
-			productReference = BEC95E301C32BE7600BA7237 /* KWTheme.framework */;
+			productReference = BEC95E301C32BE7600BA7237 /* KNWTheme.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BEC95E391C32BE7600BA7237 /* KWThemeTests */ = {
+		BEC95E391C32BE7600BA7237 /* KNWThemeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEC95E471C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KWThemeTests" */;
+			buildConfigurationList = BEC95E471C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KNWThemeTests" */;
 			buildPhases = (
 				BEC95E361C32BE7600BA7237 /* Sources */,
 				BEC95E371C32BE7600BA7237 /* Frameworks */,
@@ -181,9 +181,9 @@
 			dependencies = (
 				BEC95E3D1C32BE7600BA7237 /* PBXTargetDependency */,
 			);
-			name = KWThemeTests;
+			name = KNWThemeTests;
 			productName = KWThemeTests;
-			productReference = BEC95E3A1C32BE7600BA7237 /* KWThemeTests.xctest */;
+			productReference = BEC95E3A1C32BE7600BA7237 /* KNWTheme.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BEC95E2A1C32BE7600BA7237 /* Build configuration list for PBXProject "KWTheme" */;
+			buildConfigurationList = BEC95E2A1C32BE7600BA7237 /* Build configuration list for PBXProject "KNWTheme" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -215,8 +215,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEC95E2F1C32BE7600BA7237 /* KWTheme */,
-				BEC95E391C32BE7600BA7237 /* KWThemeTests */,
+				BEC95E2F1C32BE7600BA7237 /* KNWTheme */,
+				BEC95E391C32BE7600BA7237 /* KNWThemeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,12 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC95E681C32DFEF00BA7237 /* NSInvocation+KWTheme.m in Sources */,
-				BEC95E5B1C32C4D600BA7237 /* NSObject+KWTheme.m in Sources */,
-				BEC95E601C32CA1900BA7237 /* KWThemedObjectProxy.m in Sources */,
-				BEC95E4E1C32C0FA00BA7237 /* KWThemeContext.m in Sources */,
-				BEC95E641C32D5BF00BA7237 /* KWThemableObjectProxy.m in Sources */,
-				BEC95E571C32C28800BA7237 /* KWThemeValue.m in Sources */,
+				BEC95E681C32DFEF00BA7237 /* NSInvocation+KNWTheme.m in Sources */,
+				BEC95E5B1C32C4D600BA7237 /* NSObject+KNWTheme.m in Sources */,
+				BEC95E601C32CA1900BA7237 /* KNWThemedObjectProxy.m in Sources */,
+				BEC95E4E1C32C0FA00BA7237 /* KNWThemeContext.m in Sources */,
+				BEC95E641C32D5BF00BA7237 /* KNWThemableObjectProxy.m in Sources */,
+				BEC95E571C32C28800BA7237 /* KNWThemeValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC95E401C32BE7600BA7237 /* KWThemeTests.m in Sources */,
+				BEC95E401C32BE7600BA7237 /* KNWThemeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +265,7 @@
 /* Begin PBXTargetDependency section */
 		BEC95E3D1C32BE7600BA7237 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BEC95E2F1C32BE7600BA7237 /* KWTheme */;
+			target = BEC95E2F1C32BE7600BA7237 /* KNWTheme */;
 			targetProxy = BEC95E3C1C32BE7600BA7237 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -308,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -349,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -366,11 +366,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = KWTheme/Info.plist;
+				INFOPLIST_FILE = KNWTheme/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.coppercash.KWTheme;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KNWTheme;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -382,11 +383,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = KWTheme/Info.plist;
+				INFOPLIST_FILE = KNWTheme/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.coppercash.KWTheme;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KNWTheme;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -394,27 +396,31 @@
 		BEC95E481C32BE7600BA7237 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = KWThemeTests/Info.plist;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = KNWThemeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.coppercash.KWThemeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KNWTheme;
 			};
 			name = Debug;
 		};
 		BEC95E491C32BE7600BA7237 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = KWThemeTests/Info.plist;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = KNWThemeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.coppercash.KWThemeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KNWTheme;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEC95E2A1C32BE7600BA7237 /* Build configuration list for PBXProject "KWTheme" */ = {
+		BEC95E2A1C32BE7600BA7237 /* Build configuration list for PBXProject "KNWTheme" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEC95E421C32BE7600BA7237 /* Debug */,
@@ -423,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEC95E441C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KWTheme" */ = {
+		BEC95E441C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KNWTheme" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEC95E451C32BE7600BA7237 /* Debug */,
@@ -432,7 +438,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEC95E471C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KWThemeTests" */ = {
+		BEC95E471C32BE7600BA7237 /* Build configuration list for PBXNativeTarget "KNWThemeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEC95E481C32BE7600BA7237 /* Debug */,
