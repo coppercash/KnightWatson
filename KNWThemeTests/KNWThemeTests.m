@@ -8,9 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
-#import "KNWThemeContext.h"
-#import "KNWThemeValue.h"
-#import "NSObject+KNWTheme.h"
+#import <KNWTheme/KNWTheme.h>
 
 @interface KNWThemeTests : XCTestCase
 
@@ -18,36 +16,16 @@
 
 @implementation KNWThemeTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
-
-- (void)testAPI {
+- (void)test_themedObject
+{
     // Given
     //
     KNWThemeContext.sharedThemeContext.theme = @0;
-    
-    // When
     UIView
     *view = [[UIView alloc] init];
+    
+    // When
+    //
     view.knw_themed.backgroundColor = [KNWThemeValue values:UIColor.whiteColor, UIColor.blackColor, nil];
     
     // Then
@@ -55,41 +33,76 @@
     XCTAssertEqualObjects(UIColor.whiteColor, view.backgroundColor);
 }
 
-- (void)testAPI2 {
+- (void)test_themableObject
+{
+    // Given
+    //
+    KNWThemeContext.sharedThemeContext.theme = @0;
     UIView
     *view = [[UIView alloc] init];
     
+    // When
+    //
     view.knw_themable.backgroundColor = [KNWThemeValue values:UIColor.whiteColor, UIColor.blackColor, nil];
     
-    [[KNWThemeContext sharedThemeContext] setTheme:@0];
+    // Then
+    //
     XCTAssertEqualObjects(UIColor.whiteColor, view.backgroundColor);
-    [[KNWThemeContext sharedThemeContext] setTheme:@1];
+}
+
+- (void)test_themableObjectWillBeReThemed
+{
+    // Given
+    //
+    KNWThemeContext.sharedThemeContext.theme = @0;
+    UIView
+    *view = [[UIView alloc] init];
+    view.knw_themable.backgroundColor = [KNWThemeValue values:UIColor.whiteColor, UIColor.blackColor, nil];
+    
+    // When
+    //
+    KNWThemeContext.sharedThemeContext.theme = @1;
+    
+    // Then
+    //
     XCTAssertEqualObjects(UIColor.blackColor, view.backgroundColor);
 }
 
-- (void)testAPI3 {
+- (void)test_themableObjectWillBeDeallocAsUsual
+{
+    // Given
+    //
     UIView
     *view = [[UIView alloc] init];
     UIView __weak
     *deallocTester = view;
-    
     view.knw_themable.backgroundColor = [KNWThemeValue array:@[UIColor.whiteColor, UIColor.blackColor,]];
+    
+    // When
+    //
     view = nil;
     
+    // Then
+    //
     XCTAssertNil(deallocTester);
 }
 
-- (void)testAPI4 {
+- (void)test_passingMoreThanOneArgument
+{
+    // Given
+    //
     UIButton
     *view = [[UIButton alloc] init];
     
+    // When
+    //
+    [[KNWThemeContext sharedThemeContext] setTheme:@"A"];
     [view.knw_themable setTitleColor:[KNWThemeValue dictionary:@{@"A": UIColor.whiteColor, @"B": UIColor.blackColor,}]
                             forState:UIControlStateHighlighted];
     
-    [[KNWThemeContext sharedThemeContext] setTheme:@"A"];
+    // Then
+    //
     XCTAssertEqualObjects(UIColor.whiteColor, [view titleColorForState:UIControlStateHighlighted]);
-    [[KNWThemeContext sharedThemeContext] setTheme:@"B"];
-    XCTAssertEqualObjects(UIColor.blackColor, [view titleColorForState:UIControlStateHighlighted]);
 }
 
 @end
