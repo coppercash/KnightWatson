@@ -14,7 +14,7 @@
 #import <objc/runtime.h>
 
 @interface NSObject (KNWThemableObjectProxy)
-@property (readonly) NSMutableDictionary *knw_invocationsByMethod;
+@property (readonly) NSMutableArray *knw_invocations;
 @end
 
 @implementation KNWThemeContext
@@ -47,7 +47,7 @@
     _theme = theme;
     
     for (NSObject *object in _themableObjects) {
-        for (NSInvocation *invocation in object.knw_invocationsByMethod.allValues) {
+        for (NSInvocation *invocation in object.knw_invocations) {
             [invocation.knw_methodArgumentsCopy knw_invokeWithTarget:object
                                                                theme:theme];
         }
@@ -76,22 +76,22 @@
         [_themableObjects addObject:object];
     }
     
-    // Map retained invocation by selector on object
+    // Keep reference of retained invocation
     //
-    object.knw_invocationsByMethod[NSStringFromSelector(invocation.selector)] = invocation;
+    [object.knw_invocations addObject:invocation];
 }
 
 @end
 
 @implementation NSObject (KNWThemableObjectProxy)
 
-- (NSMutableDictionary *)knw_invocationsByMethod {
-    NSMutableDictionary
+- (NSMutableArray *)knw_invocations {
+    NSMutableArray
     *invocations = objc_getAssociatedObject(self, _cmd);
     if (nil == invocations) {
         objc_setAssociatedObject(self,
                                  _cmd,
-                                 (invocations = [[NSMutableDictionary alloc] init]),
+                                 (invocations = [[NSMutableArray alloc] init]),
                                  OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     

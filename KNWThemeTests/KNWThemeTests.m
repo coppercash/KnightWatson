@@ -105,4 +105,26 @@
     XCTAssertEqualObjects(UIColor.whiteColor, [view titleColorForState:UIControlStateHighlighted]);
 }
 
+- (void)test_invokeOneMethodMoreThanOnceWithDifferentArguments
+{
+    // Given
+    //
+    UIButton
+    *object = [[UIButton alloc] init];
+    KNWThemeContext.sharedThemeContext.theme = @"A";
+
+    // When
+    //
+    [object.knw_themable setTitleColor:[KNWThemeValue dictionary:@{@"A": UIColor.whiteColor, @"B": UIColor.blackColor,}]
+                              forState:UIControlStateHighlighted];
+    [object.knw_themable setTitleColor:[KNWThemeValue dictionary:@{@"A": UIColor.redColor, @"B": UIColor.blueColor,}]
+                              forState:UIControlStateNormal];
+    KNWThemeContext.sharedThemeContext.theme = @"B";
+
+    // Then
+    //
+    XCTAssertEqualObjects(UIColor.blackColor, [object titleColorForState:UIControlStateHighlighted]);
+    XCTAssertEqualObjects(UIColor.blueColor, [object titleColorForState:UIControlStateNormal]);
+}
+
 @end
