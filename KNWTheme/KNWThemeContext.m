@@ -20,7 +20,7 @@
 @implementation KNWThemeContext
 @dynamic theme;
 
-+ (instancetype)sharedThemeContext
++ (instancetype)defaultThemeContext
 {
     KNWThemeContext static
     *_instance = nil;

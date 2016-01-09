@@ -27,7 +27,7 @@
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
     KNWThemeContext
-    *context = KNWThemeContext.sharedThemeContext;
+    *context = KNWThemeContext.defaultThemeContext;
     
     // Register invocation to target on context
     //

@@ -20,7 +20,7 @@
 {
     // Given
     //
-    KNWThemeContext.sharedThemeContext.theme = @0;
+    KNWThemeContext.defaultThemeContext.theme = @0;
     UIView
     *view = [[UIView alloc] init];
     
@@ -37,7 +37,7 @@
 {
     // Given
     //
-    KNWThemeContext.sharedThemeContext.theme = @0;
+    KNWThemeContext.defaultThemeContext.theme = @0;
     UIView
     *view = [[UIView alloc] init];
     
@@ -54,14 +54,14 @@
 {
     // Given
     //
-    KNWThemeContext.sharedThemeContext.theme = @0;
+    KNWThemeContext.defaultThemeContext.theme = @0;
     UIView
     *view = [[UIView alloc] init];
     view.knw_themable.backgroundColor = [KNWThemeValue values:UIColor.whiteColor, UIColor.blackColor, nil];
     
     // When
     //
-    KNWThemeContext.sharedThemeContext.theme = @1;
+    KNWThemeContext.defaultThemeContext.theme = @1;
     
     // Then
     //
@@ -96,7 +96,7 @@
     
     // When
     //
-    [[KNWThemeContext sharedThemeContext] setTheme:@"A"];
+    [[KNWThemeContext defaultThemeContext] setTheme:@"A"];
     [view.knw_themable setTitleColor:[KNWThemeValue dictionary:@{@"A": UIColor.whiteColor, @"B": UIColor.blackColor,}]
                             forState:UIControlStateHighlighted];
     
@@ -111,7 +111,7 @@
     //
     UIButton
     *object = [[UIButton alloc] init];
-    KNWThemeContext.sharedThemeContext.theme = @"A";
+    KNWThemeContext.defaultThemeContext.theme = @"A";
 
     // When
     //
@@ -119,7 +119,7 @@
                               forState:UIControlStateHighlighted];
     [object.knw_themable setTitleColor:[KNWThemeValue dictionary:@{@"A": UIColor.redColor, @"B": UIColor.blueColor,}]
                               forState:UIControlStateNormal];
-    KNWThemeContext.sharedThemeContext.theme = @"B";
+    KNWThemeContext.defaultThemeContext.theme = @"B";
 
     // Then
     //

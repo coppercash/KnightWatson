@@ -16,7 +16,7 @@
     *_themableObjects;
 }
 
-+ (instancetype)sharedThemeContext;
++ (instancetype)defaultThemeContext;
 
 @property (nonatomic) id<NSCopying> theme;
 
