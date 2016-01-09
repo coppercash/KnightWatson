@@ -22,7 +22,7 @@
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
     [invocation knw_invokeWithTarget:_target
-                              theme:KNWThemeContext.defaultThemeContext.theme];
+                               theme:KNWThemeContext.defaultThemeContext.theme];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel

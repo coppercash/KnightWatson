@@ -17,5 +17,5 @@ FOUNDATION_EXPORT const unsigned char KNWThemeVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <KNWTheme/PublicHeader.h>
 
 #import <KNWTheme/KNWThemeContext.h>
-#import <KNWTheme/KNWThemeValue.h>
+#import <KNWTheme/KNWThemableValue.h>
 #import <KNWTheme/NSObject+KNWTheme.h>

@@ -26,7 +26,7 @@
     
     // When
     //
-    view.knw_themed.backgroundColor = [KNWThemeValue values:UIColor.whiteColor, UIColor.blackColor, nil];
+    view.knw_themed.backgroundColor = (id)@[UIColor.whiteColor, UIColor.blackColor,];
     
     // Then
     //
@@ -43,7 +43,7 @@
     
     // When
     //
-    view.knw_themable.backgroundColor = [KNWThemeValue values:UIColor.whiteColor, UIColor.blackColor, nil];
+    view.knw_themable.backgroundColor = (id)@[UIColor.whiteColor, UIColor.blackColor,];
     
     // Then
     //
@@ -57,7 +57,7 @@
     KNWThemeContext.defaultThemeContext.theme = @0;
     UIView
     *view = [[UIView alloc] init];
-    view.knw_themable.backgroundColor = [KNWThemeValue values:UIColor.whiteColor, UIColor.blackColor, nil];
+    view.knw_themable.backgroundColor = (id)@[UIColor.whiteColor, UIColor.blackColor,];
     
     // When
     //
@@ -76,7 +76,7 @@
     *view = [[UIView alloc] init];
     UIView __weak
     *deallocTester = view;
-    view.knw_themable.backgroundColor = [KNWThemeValue array:@[UIColor.whiteColor, UIColor.blackColor,]];
+    view.knw_themable.backgroundColor = (id)@[UIColor.whiteColor, UIColor.blackColor,];
     
     // When
     //
@@ -97,7 +97,7 @@
     // When
     //
     [[KNWThemeContext defaultThemeContext] setTheme:@"A"];
-    [view.knw_themable setTitleColor:[KNWThemeValue dictionary:@{@"A": UIColor.whiteColor, @"B": UIColor.blackColor,}]
+    [view.knw_themable setTitleColor:(id)@{@"A": UIColor.whiteColor, @"B": UIColor.blackColor,}
                             forState:UIControlStateHighlighted];
     
     // Then
@@ -115,9 +115,9 @@
 
     // When
     //
-    [object.knw_themable setTitleColor:[KNWThemeValue dictionary:@{@"A": UIColor.whiteColor, @"B": UIColor.blackColor,}]
+    [object.knw_themable setTitleColor:(id)@{@"A": UIColor.whiteColor, @"B": UIColor.blackColor,}
                               forState:UIControlStateHighlighted];
-    [object.knw_themable setTitleColor:[KNWThemeValue dictionary:@{@"A": UIColor.redColor, @"B": UIColor.blueColor,}]
+    [object.knw_themable setTitleColor:(id)@{@"A": UIColor.redColor, @"B": UIColor.blueColor,}
                               forState:UIControlStateNormal];
     KNWThemeContext.defaultThemeContext.theme = @"B";
 

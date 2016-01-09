@@ -10,7 +10,7 @@
 
 @interface KNWThemeContext : NSObject {
     @private
-    id<NSCopying>
+    id
     _theme;
     NSHashTable
     *_themableObjects;
@@ -18,6 +18,6 @@
 
 + (instancetype)defaultThemeContext;
 
-@property (nonatomic) id<NSCopying> theme;
+@property (nonatomic) id theme;
 
 @end

@@ -8,7 +8,7 @@
 
 #import "NSInvocation+KNWTheme.h"
 
-#import "KNWThemeValue.h"
+#import "KNWThemableValue.h"
 
 @implementation NSInvocation (KNWTheme)
 
@@ -26,10 +26,10 @@
         argument;
         [self getArgument:&argument
                   atIndex:index];
-        if (NO == [argument isKindOfClass:KNWThemeValue.class]) { continue; }
+        if (NO == [argument conformsToProtocol:@protocol(KNWThemableValue)]) { continue; }
         
         id
-        value = [(KNWThemeValue *)argument valuesByTheme][theme];
+        value = [(id<KNWThemableValue>)argument knw_valueByTheme:theme];
         [self setArgument:&value
                   atIndex:index];
     }
