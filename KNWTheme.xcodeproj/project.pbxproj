@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2AE5DC1C40B5AC00935312 /* KNWExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2AE5DB1C40B5AC00935312 /* KNWExampleTests.m */; };
 		BE51E40D1C40A16B00691F0D /* KNWThemableObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BE51E4011C40A16B00691F0D /* KNWThemableObjectProxy.h */; };
 		BE51E40E1C40A16B00691F0D /* KNWThemableObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51E4021C40A16B00691F0D /* KNWThemableObjectProxy.m */; };
 		BE51E40F1C40A16B00691F0D /* KNWThemeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = BE51E4031C40A16B00691F0D /* KNWThemeContext.h */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE2AE5DB1C40B5AC00935312 /* KNWExampleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWExampleTests.m; sourceTree = "<group>"; };
 		BE51E4011C40A16B00691F0D /* KNWThemableObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemableObjectProxy.h; sourceTree = "<group>"; };
 		BE51E4021C40A16B00691F0D /* KNWThemableObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemableObjectProxy.m; sourceTree = "<group>"; };
 		BE51E4031C40A16B00691F0D /* KNWThemeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemeContext.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC95E3F1C32BE7600BA7237 /* KNWThemeTests.m */,
+				BE2AE5DB1C40B5AC00935312 /* KNWExampleTests.m */,
 				BEC95E411C32BE7600BA7237 /* Info.plist */,
 			);
 			path = KNWThemeTests;
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC95E401C32BE7600BA7237 /* KNWThemeTests.m in Sources */,
+				BE2AE5DC1C40B5AC00935312 /* KNWExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
