@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class KNWThemeContext;
+
 @protocol KNWThemableValue <NSObject>
+@optional
+- (id)knw_valueByTheme:(id)theme __attribute__((deprecated));
 @required
-- (id)knw_valueByTheme:(id)theme;
+- (id)knw_valueWithThemeContext:(KNWThemeContext *)context;
 @end
 
 @interface NSDictionary (KNWThemableValue) <KNWThemableValue>

@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class KNWThemeContext;
+
 @interface NSInvocation (KNWTheme)
 
 - (instancetype)knw_methodArgumentsCopy;
-- (void)knw_invokeWithTarget:(id)target theme:(id<NSCopying>)theme;
+- (void)knw_invokeWithTarget:(id)target
+                themeContext:(KNWThemeContext *)context;
 
 @end

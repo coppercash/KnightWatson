@@ -41,7 +41,7 @@
     // Invoke invocation once
     //
     [invocation knw_invokeWithTarget:_target
-                               theme:context.theme];
+                        themeContext:context];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel

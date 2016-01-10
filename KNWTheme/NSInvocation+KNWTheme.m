@@ -9,11 +9,12 @@
 #import "NSInvocation+KNWTheme.h"
 
 #import "KNWThemableValue.h"
+#import "KNWThemeContext.h"
 
 @implementation NSInvocation (KNWTheme)
 
 - (void)knw_invokeWithTarget:(id)target
-                      theme:(id<NSCopying>)theme
+                themeContext:(KNWThemeContext *)context
 {
     NSMethodSignature
     *signature = self.methodSignature;
@@ -29,7 +30,12 @@
         if (NO == [argument conformsToProtocol:@protocol(KNWThemableValue)]) { continue; }
         
         id
-        value = [(id<KNWThemableValue>)argument knw_valueByTheme:theme];
+        value = [argument respondsToSelector:@selector(knw_valueWithThemeContext:)] ?
+        [(id<KNWThemableValue>)argument knw_valueWithThemeContext:context] :
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [(id<KNWThemableValue>)argument knw_valueByTheme:context.theme];
+#pragma clang diagnostic pop
         [self setArgument:&value
                   atIndex:index];
     }

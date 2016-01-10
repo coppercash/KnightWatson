@@ -8,11 +8,18 @@
 
 #import "KNWThemableValue.h"
 
+#import "KNWThemeContext.h"
+
 @implementation NSDictionary (KNWThemableValue)
 
 - (id)knw_valueByTheme:(id)theme
 {
     return self[theme];
+}
+
+- (id)knw_valueWithThemeContext:(KNWThemeContext *)context
+{
+    return self[context.theme];
 }
 
 @end
@@ -22,6 +29,11 @@
 - (id)knw_valueByTheme:(NSNumber *)theme
 {
     return self[theme.unsignedIntegerValue];
+}
+
+- (id)knw_valueWithThemeContext:(KNWThemeContext *)context
+{
+    return self[[(NSNumber *)context.theme unsignedIntegerValue]];
 }
 
 @end

@@ -49,7 +49,7 @@
     for (NSObject *object in _themableObjects) {
         for (NSInvocation *invocation in object.knw_invocations) {
             [invocation.knw_methodArgumentsCopy knw_invokeWithTarget:object
-                                                               theme:theme];
+                                                        themeContext:self];
         }
     }
 }
