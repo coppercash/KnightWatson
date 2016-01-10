@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'KnightWatson'
-  spec.version      = '0.1.0'
+  spec.version      = '0.1.1'
   spec.license      = 'MIT'
   spec.summary      = 'An Objective-C library which can offer almost every object themes.'
   spec.homepage     = 'https://github.com/coppercash/KnightWatson'
