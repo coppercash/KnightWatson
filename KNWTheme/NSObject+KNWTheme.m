@@ -21,4 +21,10 @@
     return (NSObject *)[[KNWThemableObjectProxy alloc] initWithTarget:self];
 }
 
+/*
+ * These method implementations only exist to please complier.
+ * Because we don't worry about that they would be overrided, the prefix are omitted.
+ */
+- (instancetype)takeNonObjectArgs { return self; }
+
 @end

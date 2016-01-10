@@ -10,7 +10,19 @@
 
 @class KNWThemeContext;
 
-@protocol KNWThemableValue <NSObject>
+
+
+@protocol KNWThemableObject <NSObject>
+- (id)knw_valueWithThemeContext:(KNWThemeContext *)context;
+@end
+
+@protocol KNWThemableNonObject <NSObject>
+- (id)knw_invocation:(NSInvocation *)invocation
+  setArgumentAtIndex:(NSUInteger)index
+    withThemeContext:(KNWThemeContext *)context;
+@end
+
+@protocol KNWThemableValue <KNWThemableObject>
 @optional
 - (id)knw_valueByTheme:(id)theme __attribute__((deprecated));
 @required

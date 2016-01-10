@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0FF47B1C538233001B6355 /* NSMethodSignatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0FF47A1C538233001B6355 /* NSMethodSignatureTests.m */; };
 		BE2AE5DC1C40B5AC00935312 /* KNWExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2AE5DB1C40B5AC00935312 /* KNWExampleTests.m */; };
 		BE51E40D1C40A16B00691F0D /* KNWThemableObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BE51E4011C40A16B00691F0D /* KNWThemableObjectProxy.h */; };
 		BE51E40E1C40A16B00691F0D /* KNWThemableObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51E4021C40A16B00691F0D /* KNWThemableObjectProxy.m */; };
@@ -20,9 +21,12 @@
 		BE51E4181C40A16B00691F0D /* NSObject+KNWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51E40C1C40A16B00691F0D /* NSObject+KNWTheme.m */; };
 		BE51E4271C40AF1500691F0D /* KNWThemableValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BE51E4251C40AF1500691F0D /* KNWThemableValue.h */; };
 		BE51E4281C40AF1500691F0D /* KNWThemableValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51E4261C40AF1500691F0D /* KNWThemableValue.m */; };
+		BEC7DD3D1C42AAE8005A0955 /* KNWNonObjectArgumentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7DD3C1C42AAE8005A0955 /* KNWNonObjectArgumentsTests.m */; };
 		BEC95E341C32BE7600BA7237 /* KNWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC95E331C32BE7600BA7237 /* KNWTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEC95E3B1C32BE7600BA7237 /* KNWTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC95E301C32BE7600BA7237 /* KNWTheme.framework */; };
 		BEC95E401C32BE7600BA7237 /* KNWThemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC95E3F1C32BE7600BA7237 /* KNWThemeTests.m */; };
+		BEFE8CA11C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = BEFE8C9F1C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.h */; };
+		BEFE8CA21C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFE8CA01C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE0FF47A1C538233001B6355 /* NSMethodSignatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMethodSignatureTests.m; sourceTree = "<group>"; };
 		BE2AE5DB1C40B5AC00935312 /* KNWExampleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWExampleTests.m; sourceTree = "<group>"; };
 		BE51E4011C40A16B00691F0D /* KNWThemableObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemableObjectProxy.h; sourceTree = "<group>"; };
 		BE51E4021C40A16B00691F0D /* KNWThemableObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemableObjectProxy.m; sourceTree = "<group>"; };
@@ -49,12 +54,15 @@
 		BE51E40C1C40A16B00691F0D /* NSObject+KNWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KNWTheme.m"; sourceTree = "<group>"; };
 		BE51E4251C40AF1500691F0D /* KNWThemableValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemableValue.h; sourceTree = "<group>"; };
 		BE51E4261C40AF1500691F0D /* KNWThemableValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemableValue.m; sourceTree = "<group>"; };
+		BEC7DD3C1C42AAE8005A0955 /* KNWNonObjectArgumentsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWNonObjectArgumentsTests.m; sourceTree = "<group>"; };
 		BEC95E301C32BE7600BA7237 /* KNWTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KNWTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC95E331C32BE7600BA7237 /* KNWTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNWTheme.h; sourceTree = "<group>"; };
 		BEC95E351C32BE7600BA7237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC95E3A1C32BE7600BA7237 /* KNWTheme.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KNWTheme.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC95E3F1C32BE7600BA7237 /* KNWThemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNWThemeTests.m; sourceTree = "<group>"; };
 		BEC95E411C32BE7600BA7237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEFE8C9F1C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+KNWTheme.h"; sourceTree = "<group>"; };
+		BEFE8CA01C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+KNWTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,8 @@
 				BE51E4061C40A16B00691F0D /* KNWThemedObjectProxy.m */,
 				BE51E4091C40A16B00691F0D /* NSInvocation+KNWTheme.h */,
 				BE51E40A1C40A16B00691F0D /* NSInvocation+KNWTheme.m */,
+				BEFE8C9F1C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.h */,
+				BEFE8CA01C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.m */,
 				BE51E40B1C40A16B00691F0D /* NSObject+KNWTheme.h */,
 				BE51E40C1C40A16B00691F0D /* NSObject+KNWTheme.m */,
 				BE51E4251C40AF1500691F0D /* KNWThemableValue.h */,
@@ -120,6 +130,8 @@
 			children = (
 				BEC95E3F1C32BE7600BA7237 /* KNWThemeTests.m */,
 				BE2AE5DB1C40B5AC00935312 /* KNWExampleTests.m */,
+				BEC7DD3C1C42AAE8005A0955 /* KNWNonObjectArgumentsTests.m */,
+				BE0FF47A1C538233001B6355 /* NSMethodSignatureTests.m */,
 				BEC95E411C32BE7600BA7237 /* Info.plist */,
 			);
 			path = KNWThemeTests;
@@ -136,6 +148,7 @@
 				BE51E4271C40AF1500691F0D /* KNWThemableValue.h in Headers */,
 				BE51E4111C40A16B00691F0D /* KNWThemedObjectProxy.h in Headers */,
 				BEC95E341C32BE7600BA7237 /* KNWTheme.h in Headers */,
+				BEFE8CA11C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.h in Headers */,
 				BE51E40F1C40A16B00691F0D /* KNWThemeContext.h in Headers */,
 				BE51E4151C40A16B00691F0D /* NSInvocation+KNWTheme.h in Headers */,
 				BE51E40D1C40A16B00691F0D /* KNWThemableObjectProxy.h in Headers */,
@@ -238,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFE8CA21C4A3C6D00A5B0F5 /* NSMethodSignature+KNWTheme.m in Sources */,
 				BE51E4101C40A16B00691F0D /* KNWThemeContext.m in Sources */,
 				BE51E4121C40A16B00691F0D /* KNWThemedObjectProxy.m in Sources */,
 				BE51E4181C40A16B00691F0D /* NSObject+KNWTheme.m in Sources */,
@@ -251,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC7DD3D1C42AAE8005A0955 /* KNWNonObjectArgumentsTests.m in Sources */,
 				BEC95E401C32BE7600BA7237 /* KNWThemeTests.m in Sources */,
+				BE0FF47B1C538233001B6355 /* NSMethodSignatureTests.m in Sources */,
 				BE2AE5DC1C40B5AC00935312 /* KNWExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

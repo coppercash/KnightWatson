@@ -13,4 +13,6 @@
 - (instancetype)knw_themed;
 - (instancetype)knw_themable;
 
+- (instancetype)takeNonObjectArgs;
+
 @end

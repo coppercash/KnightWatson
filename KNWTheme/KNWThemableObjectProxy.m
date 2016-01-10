@@ -10,6 +10,9 @@
 
 #import "KNWThemeContext.h"
 #import "NSInvocation+KNWTheme.h"
+#import "NSMethodSignature+KNWTheme.h"
+
+#import <objc/runtime.h>
 
 @interface KNWThemeContext (Internal)
 - (void)registerThemableObject:(NSObject *)object
@@ -31,22 +34,49 @@
     
     // Register invocation to target on context
     //
-    NSInvocation
-    *copied = invocation.knw_methodArgumentsCopy;
-    copied.target = nil;
-    [copied retainArguments];
-    [context registerThemableObject:_target
-                     withInvocation:copied];
+//    NSInvocation
+//    *copied = invocation.knw_methodArgumentsCopy;
+//    copied.target = nil;
+//    [copied retainArguments];
+//    [context registerThemableObject:_target
+//                     withInvocation:copied];
     
     // Invoke invocation once
     //
-    [invocation knw_invokeWithTarget:_target
-                        themeContext:context];
+    NSMethodSignature
+    *signature = _takeNonObjectArgs ? [_target methodSignatureForSelector:invocation.selector] : nil;
+    NSInvocation
+    *settled = [invocation knw_invocationBySettingArgumentsWithContext:context
+                                                 targetMethodSignature:signature];
+    [settled invokeWithTarget:_target];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
 {
-    return [_target methodSignatureForSelector:sel];
+    NSMethodSignature
+    *signature = [_target methodSignatureForSelector:sel];
+    return
+    _takeNonObjectArgs ?
+    [signature knw_methodSignatureBySubstitutingObjectArguments] :
+    signature;
+    
+        
+/*
+        Method
+        method = class_getInstanceMethod(_target.class, sel);
+        struct objc_method_description* desc =
+        method_getDescription(method);
+
+        NSLog(@"✅ %@ %s", NSStringFromSelector(sel), desc->types);
+        */
+}
+
+#pragma mark - 
+
+- (instancetype)takeNonObjectArgs
+{
+    _takeNonObjectArgs = YES;
+    return self;
 }
 
 @end

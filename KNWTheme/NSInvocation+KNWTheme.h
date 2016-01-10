@@ -15,5 +15,7 @@
 - (instancetype)knw_methodArgumentsCopy;
 - (void)knw_invokeWithTarget:(id)target
                 themeContext:(KNWThemeContext *)context;
+- (instancetype)knw_invocationBySettingArgumentsWithContext:(KNWThemeContext *)context
+                                      targetMethodSignature:(NSMethodSignature *)signature;
 
 @end
