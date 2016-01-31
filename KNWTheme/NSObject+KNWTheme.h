@@ -13,7 +13,17 @@
 - (instancetype)knw_themed;
 - (instancetype)knw_themable;
 
-- (instancetype)takeNonObjectArgs;
+@end
+
+@protocol KNWThemablyInvoking <NSObject>
+
+- (instancetype)substituteArgumentsByIndex:(NSDictionary *)argsByIndex;
 - (instancetype(^)(NSDictionary *))argsByIndex;
 
+- (instancetype)setKeepThemable:(BOOL)keep;
+- (instancetype(^)(BOOL keep))keepThemable;
+
+@end
+
+@interface NSObject (KNWThemablyInvoking) <KNWThemablyInvoking>
 @end

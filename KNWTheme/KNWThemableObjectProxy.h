@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+KNWTheme.h"
 
-@interface KNWThemableObjectProxy : NSProxy {
+@class KNWThemedInvocationBuilder;
+
+@interface KNWThemableObjectProxy : NSProxy <KNWThemablyInvoking>
+{
     NSObject __unsafe_unretained
     *_target;
-    NSDictionary
-    *_argumentsByIndex;
-    BOOL
-    _takeNonObjectArgs;
+    KNWThemedInvocationBuilder
+    *_builder;
 }
 
 - (instancetype)initWithTarget:(NSObject *)target;

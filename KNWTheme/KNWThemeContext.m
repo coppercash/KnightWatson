@@ -8,8 +8,7 @@
 
 #import "KNWThemeContext.h"
 
-#import "NSObject+KNWTheme.h"
-#import "NSInvocation+KNWTheme.h"
+#import "KNWThemedInvocation.h"
 
 #import <objc/runtime.h>
 
@@ -47,9 +46,8 @@
     _theme = theme;
     
     for (NSObject *object in _themableObjects) {
-        for (NSInvocation *invocation in object.knw_invocations) {
-            [invocation.knw_methodArgumentsCopy knw_invokeWithTarget:object
-                                                        themeContext:self];
+        for (KNWThemedInvocation *invocation in object.knw_invocations) {
+            [invocation invokeWithTarget:object];
         }
     }
 }
@@ -62,13 +60,10 @@
 #pragma mark -
 
 - (void)registerThemableObject:(NSObject *)object
-                withInvocation:(NSInvocation *)invocation
+                withInvocation:(KNWThemedInvocation *)invocation
 {
-    NSParameterAssert(nil != object);
-    NSParameterAssert(nil != invocation);
-    NSParameterAssert(invocation.argumentsRetained);
-    NSParameterAssert(nil == invocation.target);
-    NSParameterAssert(NULL != invocation.selector);
+    NSParameterAssert(object);
+    NSParameterAssert(invocation);
     
     // Context weakly refers the target object
     //

@@ -8,25 +8,30 @@
 
 #import "NSObject+KNWTheme.h"
 
-#import "KNWThemedObjectProxy.h"
 #import "KNWThemableObjectProxy.h"
 
 @implementation NSObject (KNWTheme)
 
 - (instancetype)knw_themed {
-    return (NSObject *)[[KNWThemedObjectProxy alloc] initWithTarget:self];
+    return [(id)[[KNWThemableObjectProxy alloc] initWithTarget:self] setKeepThemable:YES];
 }
 
 - (instancetype)knw_themable {
-    return (NSObject *)[[KNWThemableObjectProxy alloc] initWithTarget:self];
+    return (id)[[KNWThemableObjectProxy alloc] initWithTarget:self];
 }
+
+@end
 
 /*
  * These method implementations only exist to please complier.
  * Because we don't worry about that they would be overrided, the prefix are omitted.
  */
-- (instancetype)takeNonObjectArgs { return self; }
+@implementation NSObject (KNWThemablyInvoking)
 
 - (instancetype(^)(NSDictionary *))argsByIndex { return nil; }
+- (instancetype)substituteArgumentsByIndex:(NSDictionary *)argsByIndex { return nil; }
+
+- (instancetype)setKeepThemable:(BOOL)keep { return nil; }
+- (instancetype(^)(BOOL))keepThemable { return nil; }
 
 @end

@@ -249,10 +249,7 @@
         case 'q': {
             long long
             value = number.longLongValue;
-            long long
-            *buffer = malloc(sizeof(long long));
-            *buffer = number.longLongValue;
-            [restoredInvocation setArgument:buffer
+            [restoredInvocation setArgument:&value
                                     atIndex:index] ;
         } break;
         case 'C': {
