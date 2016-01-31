@@ -17,5 +17,6 @@
                 themeContext:(KNWThemeContext *)context;
 - (instancetype)knw_invocationBySettingArgumentsWithContext:(KNWThemeContext *)context
                                       targetMethodSignature:(NSMethodSignature *)signature;
-
+- (instancetype)knw_invocationBySubstitutingArguments:(NSDictionary *)arguments
+                                         themeContext:(KNWThemeContext *)context;
 @end

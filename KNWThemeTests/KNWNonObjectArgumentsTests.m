@@ -20,75 +20,65 @@
 {
     // Given
     //
-    KNWThemeContext.defaultThemeContext.theme = @1;
+    KNWThemeContext.defaultThemeContext.theme = @"B";
     UIView
     *view = [[UIView alloc] init];
     
     // When
     //
-    view
-    .knw_themable
-    .takeNonObjectArgs
-    .tag = (NSInteger)@[@4, @2,];
+    [view
+     .knw_themable
+     .argsByIndex(@{@0: @{@"A": @3, @"B": @4}})
+     setTag:0];
     
     // Then
     //
-    XCTAssertEqual(view.tag, 2);
+    XCTAssertEqual(view.tag, 4);
 }
 
 - (void)test_doubleArguments
 {
     // Given
     //
-    KNWThemeContext.defaultThemeContext.theme = @1;
+    KNWThemeContext.defaultThemeContext.theme = @"B";
     UIView
     *view = [[UIView alloc] init];
     
     // When
     //
-    view
-    .knw_themable
-    .takeNonObjectArgs
-    .alpha = (NSInteger)@[@4, @2,];
+    [view
+     .knw_themable
+     .argsByIndex(@{@0: @{@"A": @3., @"B": @4.}})
+     setAlpha:0.];
     
     // Then
     //
-    XCTAssertEqual(view.tag, 2);
+    XCTAssertEqual(view.alpha, 4.);
 }
-
-typedef struct PointerWrapper {
-    id __unsafe_unretained pointer;
-} PointerWrapper ;
 
 - (void)test_structArguments
 {
     // Given
     //
-    KNWThemeContext.defaultThemeContext.theme = @1;
+    KNWThemeContext.defaultThemeContext.theme = @"B";
     UIView
     *view = [[UIView alloc] init];
     
     // When
     //
-    NSArray
-    *array = @[[NSValue valueWithCGRect:CGRectMake(1., 1., 1., 1.)], [NSValue valueWithCGRect:CGRectMake(2., 2., 2., 2.)],];
-    void
-    *a = &array;
-    NSArray
-    *b = *((NSArray *__unsafe_unretained*)a);
-    
-    
-    view
-    .knw_themable
-    .takeNonObjectArgs
-    .frame = *(CGRect *)(a);
+    [view
+     .knw_themable
+     .argsByIndex(@{@0: @{@"A": [NSValue valueWithCGRect:CGRectMake(1., 1., 1., 1.)],
+                          @"B": [NSValue valueWithCGRect:CGRectMake(2., 2., 2., 2.)],}
+                    })
+     setFrame:CGRectZero];
     
     // Then
     //
-    XCTAssertEqual(1., view.frame.origin.x);
-    XCTAssertEqual(1., view.frame.origin.y);
-    XCTAssertEqual(1., view.frame.size.width);
-    XCTAssertEqual(1., view.frame.size.height);
+    XCTAssertEqual(2., view.frame.origin.x);
+    XCTAssertEqual(2., view.frame.origin.y);
+    XCTAssertEqual(2., view.frame.size.width);
+    XCTAssertEqual(2., view.frame.size.height);
 }
 
 @end

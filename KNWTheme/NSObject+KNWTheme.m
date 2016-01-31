@@ -27,4 +27,6 @@
  */
 - (instancetype)takeNonObjectArgs { return self; }
 
+- (instancetype(^)(NSDictionary *))argsByIndex { return nil; }
+
 @end

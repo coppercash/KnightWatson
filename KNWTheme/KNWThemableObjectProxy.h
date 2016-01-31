@@ -11,6 +11,8 @@
 @interface KNWThemableObjectProxy : NSProxy {
     NSObject __unsafe_unretained
     *_target;
+    NSDictionary
+    *_argumentsByIndex;
     BOOL
     _takeNonObjectArgs;
 }

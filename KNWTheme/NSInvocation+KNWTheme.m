@@ -45,20 +45,32 @@
 
 - (instancetype)knw_methodArgumentsCopy
 {
-    NSInvocation
-    *invocation = [NSInvocation invocationWithMethodSignature:self.methodSignature];
-    invocation.selector = self.selector;
+    NSInvocation __unsafe_unretained
+    *invocation = self;
+    NSParameterAssert(invocation);
     
-    for (NSUInteger index = 2; index < self.methodSignature.numberOfArguments; index++) {
-        id __unsafe_unretained
-        argument;
-        [self getArgument:&argument
-                  atIndex:index];
-        [invocation setArgument:&argument
+    NSMethodSignature __unsafe_unretained
+    *signature = invocation.methodSignature;
+    NSInvocation
+    *copied = [NSInvocation invocationWithMethodSignature:signature];
+    copied.selector = self.selector;
+    
+    for (NSUInteger index = 2; index < signature.numberOfArguments; index++) {
+        char const
+        *type = [signature getArgumentTypeAtIndex:index];
+        NSUInteger
+        bufferSize = 0;
+        NSGetSizeAndAlignment(type, &bufferSize, NULL);
+        void
+        *buffer = malloc(bufferSize);
+        [invocation getArgument:buffer
                         atIndex:index];
+        [copied setArgument:buffer
+                    atIndex:index];
+        free(buffer);
     }
     
-    return invocation;
+    return copied;
 }
 
 - (instancetype)knw_invocationBySettingArgumentsWithContext:(KNWThemeContext *)context
@@ -304,6 +316,124 @@
             
             break;
     }
+}
+
+- (instancetype)knw_invocationBySubstitutingArguments:(NSDictionary *)arguments
+                                         themeContext:(KNWThemeContext *)context
+{
+    NSInvocation __unsafe_unretained
+    *themedInvocation = self;
+    NSParameterAssert(context);
+    NSParameterAssert(themedInvocation);
+
+    NSMethodSignature
+    *signature = themedInvocation.methodSignature;
+    NSInvocation
+    *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    invocation.selector = themedInvocation.selector;
+
+    NSUInteger const static
+    argBase = 2;
+    for (NSUInteger index = argBase; index < signature.numberOfArguments; index++) {
+        // Get argument value
+        //
+        char const
+        *type = [signature getArgumentTypeAtIndex:index];
+        if (0 == strcmp(@encode(id), type)) {
+            id __unsafe_unretained
+            passed = arguments[@(index)];
+            if (nil == passed) {
+                [themedInvocation getArgument:&passed
+                                      atIndex:index];
+            }
+            
+            id
+            restored = [passed conformsToProtocol:@protocol(KNWThemableObject)] ?
+            [(id<KNWThemableObject>)passed knw_valueWithThemeContext:context] :
+            passed;
+            
+            [invocation setArgument:&restored
+                            atIndex:index];
+        }
+        else {
+            id __unsafe_unretained
+            substitution = arguments[@(index - argBase)];
+            if (substitution) {
+                if ([substitution conformsToProtocol:@protocol(KNWThemableNonObject)]) {
+                    [(id<KNWThemableNonObject>)substitution knw_invocation:invocation
+                                                        setArgumentAtIndex:index
+                                                          withThemeContext:context];
+                }
+                else if ([substitution conformsToProtocol:@protocol(KNWThemableObject)]) {
+                    id
+                    restored = [(id<KNWThemableObject>)substitution knw_valueWithThemeContext:context];
+                    
+                    // Passed value is boxed in NSValue of the same type.
+                    //
+                    if ([restored isKindOfClass:NSValue.class] &&
+                        (0 == strcmp(type, [(NSValue *)restored objCType]))) {
+                        NSUInteger
+                        bufferSize = 0;
+                        NSGetSizeAndAlignment(type, &bufferSize, NULL);
+                        void
+                        *buffer = malloc(bufferSize);
+                        [(NSValue *)restored getValue:buffer];
+                        [invocation setArgument:buffer
+                                        atIndex:index];
+                        free(buffer);
+                    }
+                    
+                    // Passed value is boxed in NSNumber.
+                    //
+                    else if ([restored isKindOfClass:NSNumber.class]) {
+                        [invocation knw_setNumberAugument:restored
+                                                  atIndex:index
+                                                   ofType:type];
+                    }
+                    else {
+                        @throw
+                        [NSException exceptionWithName:@"KNWDeBoxArugmentException"
+                                                reason:
+                         [NSString stringWithFormat:@
+                          "Augument of type '%s' is passed as '%@', "
+                          "which can't be de-boxed automatically.",
+                          type,
+                          [restored class]]
+                                              userInfo:nil];
+                    }
+                }
+                else {
+                    @throw
+                    [NSException exceptionWithName:@"KNWDeThemeArugmentException"
+                                            reason:
+                     [NSString stringWithFormat:@
+                      "Augument of type '%s' is passed as '%@', "
+                      "which can't be de-theme."
+                      "Please make it conforms to protocol %@ or %@.",
+                      type,
+                      [substitution class],
+                      @protocol(KNWThemableNonObject),
+                      @protocol(KNWThemableObject)]
+                                          userInfo:nil];
+
+                }
+            }
+            else {
+                NSUInteger
+                bufferSize = 0;
+                NSGetSizeAndAlignment(type, &bufferSize, NULL);
+                void
+                *buffer = malloc(bufferSize);
+                [themedInvocation getArgument:buffer
+                                      atIndex:index];
+                [invocation setArgument:buffer
+                                atIndex:index];
+                free(buffer);
+            }
+        }
+    }
+    
+    return invocation;
 }
 
 @end

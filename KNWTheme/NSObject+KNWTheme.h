@@ -14,5 +14,6 @@
 - (instancetype)knw_themable;
 
 - (instancetype)takeNonObjectArgs;
+- (instancetype(^)(NSDictionary *))argsByIndex;
 
 @end

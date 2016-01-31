@@ -19,7 +19,13 @@
                 withInvocation:(NSInvocation *)invocation;
 @end
 
+@interface KNWThemableObjectProxy ()
+@property (strong, nonatomic) NSDictionary *argumentsByIndex;
+@end
+
 @implementation KNWThemableObjectProxy
+@synthesize
+argumentsByIndex = _argumentsByIndex;
 
 - (instancetype)initWithTarget:(NSObject *)target
 {
@@ -34,20 +40,19 @@
     
     // Register invocation to target on context
     //
-//    NSInvocation
-//    *copied = invocation.knw_methodArgumentsCopy;
-//    copied.target = nil;
-//    [copied retainArguments];
-//    [context registerThemableObject:_target
-//                     withInvocation:copied];
+    NSInvocation
+    *copied = invocation.knw_methodArgumentsCopy;
+    copied.target = nil;
+    [copied retainArguments];
+    [context registerThemableObject:_target
+                     withInvocation:copied];
     
     // Invoke invocation once
     //
-    NSMethodSignature
-    *signature = _takeNonObjectArgs ? [_target methodSignatureForSelector:invocation.selector] : nil;
     NSInvocation
-    *settled = [invocation knw_invocationBySettingArgumentsWithContext:context
-                                                 targetMethodSignature:signature];
+    *settled =
+    [invocation knw_invocationBySubstitutingArguments:_argumentsByIndex
+                                         themeContext:context];
     [settled invokeWithTarget:_target];
 }
 
@@ -77,6 +82,16 @@
 {
     _takeNonObjectArgs = YES;
     return self;
+}
+
+- (instancetype(^)(NSDictionary *))argsByIndex
+{
+    KNWThemableObjectProxy __unsafe_unretained
+    *proxy = self;
+    return ^id (NSDictionary *argsByIndex) {
+        proxy.argumentsByIndex = argsByIndex;
+        return proxy;
+    };
 }
 
 @end
