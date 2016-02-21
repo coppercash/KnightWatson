@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+KNWTheme.h"
+#import "NSObject+KNWThemable.h"
 
 @class KNWThemedInvocationBuilder;
 

@@ -81,4 +81,69 @@
     XCTAssertEqual(2., view.frame.size.height);
 }
 
+- (void)test_objectaArgsByIndex
+{
+    // Given
+    //
+    KNWThemeContext.defaultThemeContext.theme = @"B";
+    UIView
+    *view = [[UIView alloc] init];
+    
+    // When
+    //
+    [view
+     .knw_themable
+     .argsByIndex(@{@0: @{@"A": UIColor.whiteColor,
+                          @"B": UIColor.blackColor,}
+                    })
+     setBackgroundColor:nil];
+    
+    // Then
+    //
+    XCTAssertEqualObjects(UIColor.blackColor, view.backgroundColor);
+}
+
+- (void)test_argsByIndex
+{
+    // Given
+    //
+    KNWThemeContext.defaultThemeContext.theme = @"B";
+    UIView
+    *view = [[UIView alloc] init];
+    
+    // When
+    //
+    [view
+     .knw_themable
+     .argsByIndex(@{@0: @{@"A": @42,
+                          @"B": @24,}
+                    })
+     setTag:NSNotFound];
+    
+    // Then
+    //
+    XCTAssertEqual(24, view.tag);
+}
+
+- (void)test_argAtIndex
+{
+    // Given
+    //
+    KNWThemeContext.defaultThemeContext.theme = @"B";
+    UIView
+    *view = [[UIView alloc] init];
+    
+    // When
+    //
+    [view
+     .knw_themable
+     .argAtIndex(0, @{@"A": @42,
+                      @"B": @24,})
+     setTag:NSNotFound];
+    
+    // Then
+    //
+    XCTAssertEqual(24, view.tag);
+}
+
 @end

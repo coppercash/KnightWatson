@@ -10,30 +10,13 @@
 
 #import <KNWTheme/KNWTheme.h>
 
-@interface KNWThemeTests : XCTestCase
+@interface KNWThemableObjectTests : XCTestCase
 
 @end
 
-@implementation KNWThemeTests
+@implementation KNWThemableObjectTests
 
-- (void)test_themedObject
-{
-    // Given
-    //
-    KNWThemeContext.defaultThemeContext.theme = @0;
-    UIView
-    *view = [[UIView alloc] init];
-    
-    // When
-    //
-    view.knw_themed.backgroundColor = (id)@[UIColor.whiteColor, UIColor.blackColor,];
-    
-    // Then
-    //
-    XCTAssertEqualObjects(UIColor.whiteColor, view.backgroundColor);
-}
-
-- (void)test_themableObject
+- (void)test_themableObjectWillReInvokeMethods
 {
     // Given
     //
@@ -50,7 +33,7 @@
     XCTAssertEqualObjects(UIColor.whiteColor, view.backgroundColor);
 }
 
-- (void)test_themableObjectWillBeReThemed
+- (void)test_themableObjectWillKeepThemable
 {
     // Given
     //
@@ -76,6 +59,7 @@
     *view = [[UIView alloc] init];
     UIView __weak
     *deallocTester = view;
+    KNWThemeContext.defaultThemeContext.theme = @0;
     view.knw_themable.backgroundColor = (id)@[UIColor.whiteColor, UIColor.blackColor,];
     
     // When
@@ -87,7 +71,7 @@
     XCTAssertNil(deallocTester);
 }
 
-- (void)test_passingMoreThanOneArgument
+- (void)test_passMoreThanOneArgument
 {
     // Given
     //

@@ -10,7 +10,7 @@
 
 #import "KNWThemeContext.h"
 #import "NSInvocation+KNWTheme.h"
-#import "NSObject+KNWTheme.h"
+#import "NSObject+KNWThemable.h"
 
 @interface KNWThemedInvocation ()
 
@@ -87,7 +87,7 @@ invokeOnce = _invokeOnce;
     return (_context = KNWThemeContext.defaultThemeContext);
 }
 
-#pragma mark - NSObject (KNWTheme)
+#pragma mark - NSObject (KNWThemablyInvoking)
 
 - (instancetype)substituteArgumentsByIndex:(NSDictionary *)argsByIndex
 {
@@ -106,6 +106,13 @@ invokeOnce = _invokeOnce;
 - (instancetype)setKeepThemable:(BOOL)keep
 {
     _invokeOnce = !keep;
+    return nil;
+}
+
+- (instancetype)substituteArgument:(id)argument
+                           atIndex:(NSUInteger)index
+{
+    self.argumentsByIndex[@(index)] = argument;
     return nil;
 }
 

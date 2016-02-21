@@ -8,26 +8,15 @@
 
 #import "KNWThemableObjectProxy.h"
 #import "KNWThemeContext.h"
-/* TODO: Remove
- #import "NSInvocation+KNWTheme.h"
- #import "NSMethodSignature+KNWTheme.h"
- */
 #import "KNWThemedInvocation.h"
 
 @interface KNWThemeContext (Internal)
 - (void)registerThemableObject:(NSObject *)object
                 withInvocation:(KNWThemedInvocation *)invocation;
 @end
-/*
- @interface KNWThemableObjectProxy ()
- @property (strong, nonatomic) NSDictionary *argumentsByIndex;
- @end
- */
+
 @implementation KNWThemableObjectProxy
-/* TODO: Remove
- @synthesize
- argumentsByIndex = _argumentsByIndex;
- */
+
 - (instancetype)initWithTarget:(NSObject *)target
 {
     _target = target;
@@ -37,12 +26,6 @@
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-    /* TODO: Remove
-     KNWThemeContext
-     *context = KNWThemeContext.defaultThemeContext;
-     */
-    
-    
     KNWThemedInvocation
     *themedInvocation = [_builder buildWithMethodInvocation:invocation];
     
@@ -56,49 +39,16 @@
     // Invoke invocation once
     //
     [themedInvocation invokeWithTarget:_target];
-    
-    
-    
-    
-    
-    /* TODO: Remove
-     NSInvocation
-     *copied = invocation.knw_methodArgumentsCopy;
-     copied.target = nil;
-     [copied retainArguments];
-     [context registerThemableObject:_target
-     withInvocation:copied];
-     */
-    
-    /* TODO: Remove
-     NSInvocation
-     *settled =
-     [invocation knw_invocationBySubstitutingArguments:_argumentsByIndex
-     themeContext:context];
-     [settled invokeWithTarget:_target];
-     */
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
 {
     return [_target methodSignatureForSelector:sel];
 }
-/* TODO: Remove
- #pragma mark -
- 
- - (instancetype(^)(NSDictionary *))argsByIndex
- {
- KNWThemableObjectProxy __unsafe_unretained
- *proxy = self;
- return ^id (NSDictionary *argsByIndex) {
- proxy.argumentsByIndex = argsByIndex;
- return proxy;
- };
- }
- */
+
 #pragma mark - KNWThemablyInvoking
 
-- (instancetype(^)(NSDictionary *))argsByIndex
+- (instancetype(^)(NSDictionary<NSNumber *, id> *))argsByIndex
 {
     KNWThemableObjectProxy __unsafe_unretained
     *proxy = self;
@@ -112,6 +62,24 @@
 {
     [_builder substituteArgumentsByIndex:argsByIndex];
     return self;
+}
+
+- (instancetype)substituteArgument:(id)argument
+                           atIndex:(NSUInteger)index
+{
+    [_builder substituteArgument:argument
+                         atIndex:index];
+    return self;
+}
+
+- (instancetype(^)(NSUInteger, id))argAtIndex
+{
+    KNWThemableObjectProxy __unsafe_unretained
+    *proxy = self;
+    return ^id (NSUInteger index, id argument) {
+        [proxy->_builder substituteArgument:argument atIndex:index];
+        return proxy;
+    };
 }
 
 - (instancetype)setKeepThemable:(BOOL)keep

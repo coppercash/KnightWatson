@@ -6,15 +6,11 @@
 //  Copyright © 2015 coppercash. All rights reserved.
 //
 
-#import "NSObject+KNWTheme.h"
+#import "NSObject+KNWThemable.h"
 
 #import "KNWThemableObjectProxy.h"
 
-@implementation NSObject (KNWTheme)
-
-- (instancetype)knw_themed {
-    return [(id)[[KNWThemableObjectProxy alloc] initWithTarget:self] setKeepThemable:YES];
-}
+@implementation NSObject (KNWThemable)
 
 - (instancetype)knw_themable {
     return (id)[[KNWThemableObjectProxy alloc] initWithTarget:self];
@@ -31,7 +27,18 @@
 - (instancetype(^)(NSDictionary *))argsByIndex { return nil; }
 - (instancetype)substituteArgumentsByIndex:(NSDictionary *)argsByIndex { return nil; }
 
+- (instancetype)substituteArgument:(id)argument atIndex:(NSUInteger)index { return nil; }
+- (instancetype(^)(NSUInteger, id))argAtIndex { return nil; }
+
 - (instancetype)setKeepThemable:(BOOL)keep { return nil; }
 - (instancetype(^)(BOOL))keepThemable { return nil; }
+
+@end
+
+@implementation NSObject (KNWConvenientlyThemable)
+
+- (instancetype)knw_themed {
+    return (id)[[[KNWThemableObjectProxy alloc] initWithTarget:self] setKeepThemable:NO];
+}
 
 @end

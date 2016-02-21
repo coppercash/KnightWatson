@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (KNWTheme)
+@interface NSObject (KNWThemable)
 
-- (instancetype)knw_themed;
 - (instancetype)knw_themable;
 
 @end
@@ -18,7 +17,10 @@
 @protocol KNWThemablyInvoking <NSObject>
 
 - (instancetype)substituteArgumentsByIndex:(NSDictionary *)argsByIndex;
-- (instancetype(^)(NSDictionary *))argsByIndex;
+- (instancetype(^)(NSDictionary<NSNumber *, id> *))argsByIndex;
+
+- (instancetype)substituteArgument:(id)argument atIndex:(NSUInteger)index;
+- (instancetype(^)(NSUInteger, id))argAtIndex;
 
 - (instancetype)setKeepThemable:(BOOL)keep;
 - (instancetype(^)(BOOL keep))keepThemable;
@@ -26,4 +28,10 @@
 @end
 
 @interface NSObject (KNWThemablyInvoking) <KNWThemablyInvoking>
+@end
+
+@interface NSObject (KNWConvenientlyThemable)
+
+- (instancetype)knw_themed;
+
 @end

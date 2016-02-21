@@ -13,10 +13,15 @@
 @interface NSInvocation (KNWTheme)
 
 - (instancetype)knw_methodArgumentsCopy;
-- (void)knw_invokeWithTarget:(id)target
-                themeContext:(KNWThemeContext *)context;
-- (instancetype)knw_invocationBySettingArgumentsWithContext:(KNWThemeContext *)context
-                                      targetMethodSignature:(NSMethodSignature *)signature;
+
 - (instancetype)knw_invocationBySubstitutingArguments:(NSDictionary *)arguments
                                          themeContext:(KNWThemeContext *)context;
+
+- (void)knw_setValueArguement:(NSValue *)value
+                      atIndex:(NSUInteger)index;
+
+- (void)knw_setNumberAugument:(NSNumber *)number
+                      atIndex:(NSUInteger)index
+                       ofType:(char const *)wantedType;
+
 @end
