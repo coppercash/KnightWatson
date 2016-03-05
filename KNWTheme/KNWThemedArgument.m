@@ -28,13 +28,13 @@
 }
 
 - (void)knw_invocation:(NSInvocation *)invocation
-  setArgumentAtIndex:(NSUInteger)index
-    withThemeContext:(KNWThemeContext *)context
+    setArgumentAtIndex:(NSUInteger)index
+      withThemeContext:(KNWThemeContext *)context
 {
     NSParameterAssert(invocation);
     NSParameterAssert(context);
     NSParameterAssert(index < invocation.methodSignature.numberOfArguments);
-
+    
     id
     value = _valuesByTheme[context.theme];
     char const
@@ -80,7 +80,7 @@
     for (NSUInteger index = 0; index < array.count; index++) {
         collector[@(index)] = array[index];
     }
-
+    
     return [[self alloc] initWithValuesByTheme:collector];
 }
 
