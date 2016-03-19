@@ -1,10 +1,16 @@
 PODS:
-  - KnightWatson (0.1.1)
+  - KnightWatson (0.1.2)
+  - PNChart (0.8.8):
+    - UICountingLabel (~> 1.2.0)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - KnightWatson
+  - PNChart (~> 0.8)
 
 SPEC CHECKSUMS:
-  KnightWatson: 18dad9df754f26742d3e007e3bd018c4e99b049c
+  KnightWatson: 4fb5caaeebf78d042aa69516ddac2357ebe2a469
+  PNChart: 25f91e9c4688af49c3647489760624d037f5383f
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
 COCOAPODS: 0.39.0

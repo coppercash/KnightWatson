@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, KNWDCell) {
+    KNWDCellButton,
+    KNWDCellImage,
+    KNWDCellLabel,
+    KNWDCellLayer,
+    KNWDCellChart,
+    
+    KNWDCellCount,
+};
+
 @interface ViewController : UIViewController
 {
     @protected
@@ -21,3 +31,20 @@
 
 @end
 
+@interface KNWDBaseCell : UICollectionViewCell
+@end
+
+@interface KNWDLabelCell : KNWDBaseCell
+@end
+
+@interface KNWDButtonCell : KNWDBaseCell
+@end
+
+@interface KNWDImageCell : KNWDBaseCell
+@end
+
+@interface KNWDLayerCell : KNWDBaseCell
+@end
+
+@interface KNWDChartCell : KNWDBaseCell
+@end
