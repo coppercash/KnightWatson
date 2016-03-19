@@ -1,12 +1,22 @@
 # Knight Watson
 
-## Usage
+## Installation with CocoaPods
 
-```objectivec
-#import "KNWTheme.h"
+### Podfile
+
+Add following line to your `Podfile`
+
+```shell
+pod 'KnightWatson'
 ```
 
-# How to use
+### Usage
+
+```objectivec
+#import <KnightWatson/KNWTheme.h>
+```
+
+## How to use
 
 ```objectivec
     UIButton
