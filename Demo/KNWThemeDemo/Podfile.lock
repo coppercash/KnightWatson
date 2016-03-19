@@ -1,0 +1,10 @@
+PODS:
+  - KnightWatson (0.1.1)
+
+DEPENDENCIES:
+  - KnightWatson
+
+SPEC CHECKSUMS:
+  KnightWatson: 18dad9df754f26742d3e007e3bd018c4e99b049c
+
+COCOAPODS: 0.39.0
