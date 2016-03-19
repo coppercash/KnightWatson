@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41D17B389B9F1687A3F92253 /* libPods-KNWThemeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 056D8AEE8C1A8BDFE98DD0BE /* libPods-KNWThemeDemo.a */; };
+		BE2A938A1C9CEA830036E2F8 /* KNWThemeContext+Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A93891C9CEA830036E2F8 /* KNWThemeContext+Demo.m */; };
 		BED35CA51C8B1B2900B7F298 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED35CA41C8B1B2900B7F298 /* main.m */; };
 		BED35CA81C8B1B2900B7F298 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED35CA71C8B1B2900B7F298 /* AppDelegate.m */; };
 		BED35CAB1C8B1B2900B7F298 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED35CAA1C8B1B2900B7F298 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		056D8AEE8C1A8BDFE98DD0BE /* libPods-KNWThemeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KNWThemeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2436978D940060F0ACA0368 /* Pods-KNWThemeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNWThemeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KNWThemeDemo/Pods-KNWThemeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BE2A93881C9CEA830036E2F8 /* KNWThemeContext+Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KNWThemeContext+Demo.h"; sourceTree = "<group>"; };
+		BE2A93891C9CEA830036E2F8 /* KNWThemeContext+Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KNWThemeContext+Demo.m"; sourceTree = "<group>"; };
 		BED35CA01C8B1B2900B7F298 /* KNWThemeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNWThemeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED35CA41C8B1B2900B7F298 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BED35CA61C8B1B2900B7F298 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,9 +64,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE2A93871C9CEA720036E2F8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BE2A93881C9CEA830036E2F8 /* KNWThemeContext+Demo.h */,
+				BE2A93891C9CEA830036E2F8 /* KNWThemeContext+Demo.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		BED35C971C8B1B2900B7F298 = {
 			isa = PBXGroup;
 			children = (
+				BE2A93871C9CEA720036E2F8 /* Source */,
 				BED35CA21C8B1B2900B7F298 /* KNWThemeDemo */,
 				BED35CA11C8B1B2900B7F298 /* Products */,
 				7F0386334FA77695DA3870AD /* Pods */,
@@ -225,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED35CAB1C8B1B2900B7F298 /* ViewController.m in Sources */,
+				BE2A938A1C9CEA830036E2F8 /* KNWThemeContext+Demo.m in Sources */,
 				BED35CA81C8B1B2900B7F298 /* AppDelegate.m in Sources */,
 				BED35CA51C8B1B2900B7F298 /* main.m in Sources */,
 			);

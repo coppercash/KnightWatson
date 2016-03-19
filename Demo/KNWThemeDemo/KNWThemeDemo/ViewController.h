@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+{
+    @protected
+    CGFloat
+    _margin;
+    NSUInteger
+    _numberOfColumns;
+    NSArray
+    *_themes;
+}
 
 @end
 

@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+#import <KnightWatson/KNWTheme.h>
+#import "KNWThemeContext+Demo.h"
+
 @interface ViewController ()
 
 @end
@@ -20,9 +23,27 @@ UICollectionViewDelegateFlowLayout
 
 @implementation ViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        _margin = 20.;
+        _numberOfColumns = 2;
+        _themes = @[KNWDTheme.system,
+                    KNWDTheme.daylight,
+                    KNWDTheme.night,
+                    KNWDTheme.lawn,];
+    }
+    return self;
+}
+
 - (void)loadView
 {
-    self.view = [[UICollectionView alloc] init];
+    UICollectionViewFlowLayout
+    *layout = [[UICollectionViewFlowLayout alloc] init];
+    UICollectionView
+    *view = [[UICollectionView alloc] initWithFrame:UIScreen.mainScreen.bounds
+                               collectionViewLayout:layout];
+    self.view = view;
 }
 
 - (void)viewDidLoad
@@ -32,20 +53,37 @@ UICollectionViewDelegateFlowLayout
     
     UICollectionView
     *view = (UICollectionView *)self.view;
-    UICollectionViewFlowLayout
-    *layout = [[UICollectionViewFlowLayout alloc] init];
-    
-    view.collectionViewLayout = layout;
+    view.backgroundColor = UIColor.whiteColor;
     view.delegate = self;
     view.dataSource = self;
-    
     [view       registerClass:UICollectionViewCell.class
    forCellWithReuseIdentifier:@"general"];
+    
+    UICollectionViewFlowLayout
+    *layout = (UICollectionViewFlowLayout *)view.collectionViewLayout;
+    layout.minimumInteritemSpacing =
+    layout.minimumLineSpacing =
+    _margin;
+    layout.sectionInset = UIEdgeInsetsMake(_margin, _margin, _margin, _margin);
+    
+    // Navigation Bar
+    //
+    UISegmentedControl
+    *segment = [[UISegmentedControl alloc] initWithItems:_themes];
+    [segment addTarget:self
+                action:@selector(handleSegmentValueChanged:)
+      forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = segment;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)handleSegmentValueChanged:(UISegmentedControl *)segment
+{
+    KNWThemeContext.defaultThemeContext.theme = _themes[segment.selectedSegmentIndex];
 }
 
 @end
@@ -60,18 +98,32 @@ UICollectionViewDelegateFlowLayout
                                                       forIndexPath:indexPath];
     UIView
     *superview = cell.contentView;
+    superview.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     UILabel
     *label = [[UILabel alloc] initWithFrame:superview.bounds];
     [superview addSubview:label];
-    label.text = @"Knight Watson;
+    label.text = @"Knight Watson";
+    label.knw_themable.textColor = (id)
+  @{KNWDTheme.daylight: UIColor.redColor,
+    KNWDTheme.night: UIColor.blueColor,
+    KNWDTheme.lawn: UIColor.greenColor,};
     return cell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    return 4;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat
+    width = (collectionView.bounds.size.width - (_numberOfColumns + 1) * _margin) / _numberOfColumns;
+    return CGSizeMake(width, width);
 }
 
 @end

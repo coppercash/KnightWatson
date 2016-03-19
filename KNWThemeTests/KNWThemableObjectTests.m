@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
-#import <KNWTheme/KNWTheme.h>
+#import <KnightWatson/KnightWatson.h>
 
 @interface KNWThemableObjectTests : XCTestCase
 

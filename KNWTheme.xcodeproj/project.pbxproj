@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2A938C1C9CFFC60036E2F8 /* KnightWatson.h in Headers */ = {isa = PBXBuildFile; fileRef = BE2A938B1C9CFFC60036E2F8 /* KnightWatson.h */; };
 		BE2AE5DC1C40B5AC00935312 /* KNWExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2AE5DB1C40B5AC00935312 /* KNWExampleTests.m */; };
 		BE51E40D1C40A16B00691F0D /* KNWThemableObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BE51E4011C40A16B00691F0D /* KNWThemableObjectProxy.h */; };
 		BE51E40E1C40A16B00691F0D /* KNWThemableObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51E4021C40A16B00691F0D /* KNWThemableObjectProxy.m */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE2A938B1C9CFFC60036E2F8 /* KnightWatson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnightWatson.h; sourceTree = "<group>"; };
 		BE2AE5DB1C40B5AC00935312 /* KNWExampleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWExampleTests.m; sourceTree = "<group>"; };
 		BE51E4011C40A16B00691F0D /* KNWThemableObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWThemableObjectProxy.h; sourceTree = "<group>"; };
 		BE51E4021C40A16B00691F0D /* KNWThemableObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemableObjectProxy.m; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC95E331C32BE7600BA7237 /* KNWTheme.h */,
+				BE2A938B1C9CFFC60036E2F8 /* KnightWatson.h */,
 				BE51E4031C40A16B00691F0D /* KNWThemeContext.h */,
 				BE51E4041C40A16B00691F0D /* KNWThemeContext.m */,
 				BE51E40B1C40A16B00691F0D /* NSObject+KNWThemable.h */,
@@ -166,6 +169,7 @@
 				BEC95E341C32BE7600BA7237 /* KNWTheme.h in Headers */,
 				BE51E40F1C40A16B00691F0D /* KNWThemeContext.h in Headers */,
 				BEB2C13D1C79ADD900FD3DF4 /* KNWThemedArgument.h in Headers */,
+				BE2A938C1C9CFFC60036E2F8 /* KnightWatson.h in Headers */,
 				BE51E4151C40A16B00691F0D /* NSInvocation+KNWTheme.h in Headers */,
 				BEB5649F1C5E087700FB7434 /* KNWThemedInvocation.h in Headers */,
 				BEB2C1301C799CD000FD3DF4 /* KNWArgument.h in Headers */,

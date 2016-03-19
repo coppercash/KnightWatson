@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <KnightWatson/KNWTheme.h>
+
 @interface AppDelegate ()
 
 @end
