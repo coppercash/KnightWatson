@@ -7,5 +7,6 @@
 //
 
 #import <KnightWatson/KNWThemeContext.h>
-#import <KnightWatson/KNWThemableValue.h>
-#import <KnightWatson/NSObject+KNWTheme.h>
+#import <KnightWatson/NSObject+KNWThemable.h>
+#import <KnightWatson/KNWArgument.h>
+#import <KnightWatson/KNWThemedArgument.h>
