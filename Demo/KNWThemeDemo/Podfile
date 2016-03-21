@@ -6,6 +6,7 @@
 target 'KNWThemeDemo' do
 
 pod 'KnightWatson'
+pod 'PNChart', '~> 0.8'
 
 end
 

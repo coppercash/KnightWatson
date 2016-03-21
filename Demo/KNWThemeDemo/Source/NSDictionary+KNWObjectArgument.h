@@ -1,5 +1,5 @@
 //
-//  NSArray+KNWObjectArgument.h
+//  NSDictionary+KNWObjectArgument.h
 //  KNWTheme
 //
 //  Created by William on 2/21/16.
@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <KnightWatson/KnightWatson.h>
+#import <KnightWatson/KNWArgument.h>
 
-@interface NSArray (KNWObjectArgument) <KNWObjectArgument>
+@interface NSDictionary (KNWObjectArgument) <KNWObjectArgument>
 
 @end

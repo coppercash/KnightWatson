@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <KNWTheme/KNWTheme.h>
+#import <KnightWatson/KnightWatson.h>
 
 @interface NSDictionary (KNWObjectArgument) <KNWObjectArgument>
 
