@@ -24,7 +24,7 @@ pod 'KnightWatson'
 The import the headers with one line to where you need it.
 
 ```objectivec
-#import <KnightWatson/KNWTheme.h>
+#import <KnightWatson/KnightWatson.h>
 ```
 
 ## How to Use
