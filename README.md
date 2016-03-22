@@ -38,8 +38,8 @@ All magic starts from the suffix `knw_themable`, and then what left are only fam
     //
     UIView
     *view = [[UIView alloc] init];
-    view.knw_themed.backgroundColor = (id)@{@"daylight": UIColor.whiteColor,
-                                            @"night": UIColor.blackColor,};
+    view.knw_themable.backgroundColor = (id)@{@"daylight": UIColor.whiteColor,
+                                                 @"night": UIColor.blackColor,};
 
     // Change the theme sometime later
     //
