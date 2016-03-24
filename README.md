@@ -139,3 +139,4 @@ For example, if instances of `NSNumber` are used as themes, `NSArray` will be ab
 + [ ] Notifications for theme-switching
 + [ ] Support OS X
 + [ ] Support Cathage
++ [ ] Documentation
