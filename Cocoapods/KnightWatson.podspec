@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/coppercash/KnightWatson'
   spec.author       = { 'CopperCash' => 'coderdreamer@gmail.com' }
   spec.source       = { :git => 'https://github.com/coppercash/KnightWatson.git', :tag => spec.version }
-  spec.source_files = 'KNWTheme/*.{h,m}', 'KNWTheme/Arguments/*.{h,m}'
+  spec.source_files = 'KNWTheme/*.{h,m}'
   spec.exclude_files = 'KNWTheme/KNWTheme.h'
   spec.requires_arc = true
   spec.platform     = :ios, "7.0"

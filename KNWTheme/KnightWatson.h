@@ -10,3 +10,7 @@
 #import <KnightWatson/NSObject+KNWThemable.h>
 #import <KnightWatson/KNWArgument.h>
 #import <KnightWatson/KNWThemedArgument.h>
+#import <KnightWatson/KNWACGColorRef.h>
+#import <KnightWatson/KNWAUIImage.h>
+#import <KnightWatson/NSArray+KNWObjectArgument.h>
+#import <KnightWatson/NSDictionary+KNWObjectArgument.h>

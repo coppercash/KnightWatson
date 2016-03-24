@@ -20,3 +20,7 @@ FOUNDATION_EXPORT const unsigned char KNWThemeVersionString[];
 #import <KNWTheme/NSObject+KNWThemable.h>
 #import <KNWTheme/KNWArgument.h>
 #import <KNWTheme/KNWThemedArgument.h>
+#import <KNWTheme/KNWACGColorRef.h>
+#import <KNWTheme/KNWAUIImage.h>
+#import <KNWTheme/NSArray+KNWObjectArgument.h>
+#import <KNWTheme/NSDictionary+KNWObjectArgument.h>

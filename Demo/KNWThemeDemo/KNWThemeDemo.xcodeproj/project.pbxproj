@@ -14,14 +14,12 @@
 		BE2A93921C9D0A700036E2F8 /* NSDictionary+KNWObjectArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A93911C9D0A700036E2F8 /* NSDictionary+KNWObjectArgument.m */; };
 		BE2A93951C9D0F430036E2F8 /* NSLayoutConstraint+Convenient.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A93941C9D0F430036E2F8 /* NSLayoutConstraint+Convenient.m */; };
 		BE2A93981C9D34B90036E2F8 /* UIColor+LightAndDark.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A93971C9D34B90036E2F8 /* UIColor+LightAndDark.m */; };
-		BE2A939B1C9D41040036E2F8 /* KNWAUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A939A1C9D41040036E2F8 /* KNWAUIImage.m */; };
 		BED35CA51C8B1B2900B7F298 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED35CA41C8B1B2900B7F298 /* main.m */; };
 		BED35CA81C8B1B2900B7F298 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED35CA71C8B1B2900B7F298 /* AppDelegate.m */; };
 		BED35CAB1C8B1B2900B7F298 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED35CAA1C8B1B2900B7F298 /* ViewController.m */; };
 		BED35CAE1C8B1B2900B7F298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED35CAC1C8B1B2900B7F298 /* Main.storyboard */; };
 		BED35CB01C8B1B2900B7F298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED35CAF1C8B1B2900B7F298 /* Assets.xcassets */; };
 		BED35CB31C8B1B2900B7F298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED35CB11C8B1B2900B7F298 /* LaunchScreen.storyboard */; };
-		BEF893FD1CA0309700CF5E22 /* KNWACGColorRef.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF893FC1CA0309700CF5E22 /* KNWACGColorRef.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +37,6 @@
 		BE2A93941C9D0F430036E2F8 /* NSLayoutConstraint+Convenient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Convenient.m"; sourceTree = "<group>"; };
 		BE2A93961C9D34B90036E2F8 /* UIColor+LightAndDark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LightAndDark.h"; sourceTree = "<group>"; };
 		BE2A93971C9D34B90036E2F8 /* UIColor+LightAndDark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LightAndDark.m"; sourceTree = "<group>"; };
-		BE2A93991C9D41040036E2F8 /* KNWAUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWAUIImage.h; sourceTree = "<group>"; };
-		BE2A939A1C9D41040036E2F8 /* KNWAUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWAUIImage.m; sourceTree = "<group>"; };
 		BED35CA01C8B1B2900B7F298 /* KNWThemeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNWThemeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED35CA41C8B1B2900B7F298 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BED35CA61C8B1B2900B7F298 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,8 +47,6 @@
 		BED35CAF1C8B1B2900B7F298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED35CB21C8B1B2900B7F298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED35CB41C8B1B2900B7F298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEF893FB1CA0309700CF5E22 /* KNWACGColorRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWACGColorRef.h; sourceTree = "<group>"; };
-		BEF893FC1CA0309700CF5E22 /* KNWACGColorRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWACGColorRef.m; sourceTree = "<group>"; };
 		D7BBD4D2C0E88369407F448D /* Pods-KNWThemeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNWThemeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-KNWThemeDemo/Pods-KNWThemeDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,10 +90,6 @@
 				BE2A93941C9D0F430036E2F8 /* NSLayoutConstraint+Convenient.m */,
 				BE2A93961C9D34B90036E2F8 /* UIColor+LightAndDark.h */,
 				BE2A93971C9D34B90036E2F8 /* UIColor+LightAndDark.m */,
-				BE2A93991C9D41040036E2F8 /* KNWAUIImage.h */,
-				BE2A939A1C9D41040036E2F8 /* KNWAUIImage.m */,
-				BEF893FB1CA0309700CF5E22 /* KNWACGColorRef.h */,
-				BEF893FC1CA0309700CF5E22 /* KNWACGColorRef.m */,
 				BE231E931C9EEEB70082F3C8 /* NSValue+KNWTheme.h */,
 				BE231E941C9EEEB70082F3C8 /* NSValue+KNWTheme.m */,
 				BE231E901C9ED7000082F3C8 /* UIColor+Hex.h */,
@@ -274,9 +264,7 @@
 			files = (
 				BED35CAB1C8B1B2900B7F298 /* ViewController.m in Sources */,
 				BE231E951C9EEEB70082F3C8 /* NSValue+KNWTheme.m in Sources */,
-				BEF893FD1CA0309700CF5E22 /* KNWACGColorRef.m in Sources */,
 				BE2A93921C9D0A700036E2F8 /* NSDictionary+KNWObjectArgument.m in Sources */,
-				BE2A939B1C9D41040036E2F8 /* KNWAUIImage.m in Sources */,
 				BE2A93951C9D0F430036E2F8 /* NSLayoutConstraint+Convenient.m in Sources */,
 				BE231E921C9ED7000082F3C8 /* UIColor+Hex.m in Sources */,
 				BE2A93981C9D34B90036E2F8 /* UIColor+LightAndDark.m in Sources */,
