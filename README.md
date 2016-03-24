@@ -64,7 +64,30 @@ An argument will be regarded as themed if it conforms to protocol `KNWObjectArgu
 @end
 ```
 
-### Non-object Arguments
+#### Arguments Consume a lot of Memory
+
+Instances of `UIImage` are widely used, and may be replaced while switching between themes. Because they consume a lot of memory, we shouldn't keep images for all the themes in memory. Instead, we just keep their names. Take a look at class `KNWAUIImage` to understand better.
+
+```objectivec
+@implementation KNWAUIImage
+
+- (instancetype)initWithImageNamesByTheme:(NSDictionary *)names
+{
+    if (self = [super init]) {
+        _imageNamesByTheme = names;
+    }
+    return self;
+}
+
+- (id)knw_valueWithThemeContext:(KNWThemeContext *)context
+{
+    return [UIImage imageNamed:_imageNamesByTheme[context.theme]];
+}
+
+@end
+```
+
+#### Non-object Arguments
 
 Non-object arguments are supported as well:
 
@@ -82,7 +105,30 @@ Non-object arguments are supported as well:
      setFrame:CGRectZero];
 ```
 
-To be used as themed argument for non-object value, a class muse conform protocol `KNWNonObjectArgument`. Also, take a look at the implementation of the example method `KNWThemedArgument#knw_invocation:setArgumentAtIndex:withThemeContext:`.
+Primitive variables (integer, bool...) and C structs boxed in `NSNumber` or `NSValue` can be automatically de-boxed. Moreover, you can also implement a class to store non-object arguments in your own way. To archieve this, make the class conform protocol `KNWNonObjectArgument`. Take class `KNWACGColorRef` as an example:
+
+```objectivec
+@implementation KNWACGColorRef
+
+- (instancetype)initWithColorsByTheme:(NSDictionary *)colors {
+    if (self = [super init]) {
+        _colorsByTheme = colors;
+    }
+    return self;
+}
+
+- (void)knw_invocation:(NSInvocation *)invocation
+    setArgumentAtIndex:(NSUInteger)index
+      withThemeContext:(KNWThemeContext *)context
+{
+    CGColorRef
+    color = _colorsByTheme[context.theme].CGColor;
+    [invocation setArgument:&color
+                    atIndex:index];
+}
+
+@end
+```
 
 ### Instance with Short Lifetime
 
