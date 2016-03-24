@@ -6,6 +6,7 @@
 //  Copyright © 2016 coppercash. All rights reserved.
 //
 
+/*
 #import "NSArray+KNWObjectArgument.h"
 
 #import "KNWThemeContext.h"
@@ -18,3 +19,4 @@
 }
 
 @end
+ */

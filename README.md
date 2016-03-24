@@ -24,7 +24,7 @@ pod 'KnightWatson'
 The import the headers with one line to where you need it.
 
 ```objectivec
-#import <KnightWatson/KNWTheme.h>
+#import <KnightWatson/KnightWatson.h>
 ```
 
 ## How to Use
@@ -38,8 +38,8 @@ All magic starts from the suffix `knw_themable`, and then what left are only fam
     //
     UIView
     *view = [[UIView alloc] init];
-    view.knw_themed.backgroundColor = (id)@{@"daylight": UIColor.whiteColor,
-                                            @"night": UIColor.blackColor,};
+    view.knw_themable.backgroundColor = (id)@{@"daylight": UIColor.whiteColor,
+                                                 @"night": UIColor.blackColor,};
 
     // Change the theme sometime later
     //
@@ -122,3 +122,21 @@ For example, if instances of `NSNumber` are used as themes, `NSArray` will be ab
     [button.knw_themable setTitleColor:(id)colorsByTheme
                               forState:UIControlStateNormal];
 ```
+
+## Todo
+
++ [x] [`UIButton`, `UILabel`, `UIImageView`...] support
++ [x] [`UIColor`, `UIImage`, `NSAttributedString`...] support
++ [x] Mutiple themes support
++ [x] Custom theme type support
++ [x] Cocoapods support
++ [x] Non-object (primitive types, C struct) argument support
++ [x] Custom argument implementation support
++ [x] Dot expression support
++ [ ] Multiple threads (multiple theme contexts) support
++ [ ] Class methods support
++ [ ] Duplicate registered invocations removal
++ [ ] Notifications for theme-switching
++ [ ] Support OS X
++ [ ] Support Cathage
++ [ ] Documentation

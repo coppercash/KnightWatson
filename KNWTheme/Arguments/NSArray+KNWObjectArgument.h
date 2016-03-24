@@ -6,8 +6,14 @@
 //  Copyright © 2016 coppercash. All rights reserved.
 //
 
-#import "KNWArgument.h"
-
-@interface NSArray (KNWObjectArgument) <KNWObjectArgument>
-
-@end
+/**
+ Considering that you may have your own implementation for NSArray to conform KNWObjectArguemnt,
+ following codes are commented by default.
+ */
+/*
+ #import "KNWArgument.h"
+ 
+ @interface NSArray (KNWObjectArgument) <KNWObjectArgument>
+ 
+ @end
+ */
