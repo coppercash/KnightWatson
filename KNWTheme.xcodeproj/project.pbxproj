@@ -17,6 +17,14 @@
 		BE51E4161C40A16B00691F0D /* NSInvocation+KNWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51E40A1C40A16B00691F0D /* NSInvocation+KNWTheme.m */; };
 		BE51E4171C40A16B00691F0D /* NSObject+KNWThemable.h in Headers */ = {isa = PBXBuildFile; fileRef = BE51E40B1C40A16B00691F0D /* NSObject+KNWThemable.h */; };
 		BE51E4181C40A16B00691F0D /* NSObject+KNWThemable.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51E40C1C40A16B00691F0D /* NSObject+KNWThemable.m */; };
+		BE5531EE1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = BE5531EA1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.h */; };
+		BE5531EF1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5531EB1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.m */; };
+		BE5531F01CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = BE5531EC1CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.h */; };
+		BE5531F11CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5531ED1CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.m */; };
+		BE5531F61CA2E69800871C73 /* KNWACGColorRef.h in Headers */ = {isa = PBXBuildFile; fileRef = BE5531F21CA2E69800871C73 /* KNWACGColorRef.h */; };
+		BE5531F71CA2E69800871C73 /* KNWACGColorRef.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5531F31CA2E69800871C73 /* KNWACGColorRef.m */; };
+		BE5531F81CA2E69800871C73 /* KNWAUIImage.h in Headers */ = {isa = PBXBuildFile; fileRef = BE5531F41CA2E69800871C73 /* KNWAUIImage.h */; };
+		BE5531F91CA2E69800871C73 /* KNWAUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5531F51CA2E69800871C73 /* KNWAUIImage.m */; };
 		BEB2C12E1C79959500FD3DF4 /* KNWThemedObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2C12D1C79959500FD3DF4 /* KNWThemedObjectTests.m */; };
 		BEB2C1301C799CD000FD3DF4 /* KNWArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = BEB2C12F1C799CD000FD3DF4 /* KNWArgument.h */; };
 		BEB2C1371C799EC100FD3DF4 /* NSDictionary+KNWObjectArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2C1361C799EC100FD3DF4 /* NSDictionary+KNWObjectArgument.m */; };
@@ -53,6 +61,14 @@
 		BE51E40A1C40A16B00691F0D /* NSInvocation+KNWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+KNWTheme.m"; sourceTree = "<group>"; };
 		BE51E40B1C40A16B00691F0D /* NSObject+KNWThemable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KNWThemable.h"; sourceTree = "<group>"; };
 		BE51E40C1C40A16B00691F0D /* NSObject+KNWThemable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KNWThemable.m"; sourceTree = "<group>"; };
+		BE5531EA1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KNWObjectArgument.h"; sourceTree = "<group>"; };
+		BE5531EB1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KNWObjectArgument.m"; sourceTree = "<group>"; };
+		BE5531EC1CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KNWObjectArgument.h"; sourceTree = "<group>"; };
+		BE5531ED1CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KNWObjectArgument.m"; sourceTree = "<group>"; };
+		BE5531F21CA2E69800871C73 /* KNWACGColorRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWACGColorRef.h; sourceTree = "<group>"; };
+		BE5531F31CA2E69800871C73 /* KNWACGColorRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWACGColorRef.m; sourceTree = "<group>"; };
+		BE5531F41CA2E69800871C73 /* KNWAUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWAUIImage.h; sourceTree = "<group>"; };
+		BE5531F51CA2E69800871C73 /* KNWAUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWAUIImage.m; sourceTree = "<group>"; };
 		BEB2C12D1C79959500FD3DF4 /* KNWThemedObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNWThemedObjectTests.m; sourceTree = "<group>"; };
 		BEB2C12F1C799CD000FD3DF4 /* KNWArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNWArgument.h; sourceTree = "<group>"; };
 		BEB2C1351C799EC100FD3DF4 /* NSDictionary+KNWObjectArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KNWObjectArgument.h"; sourceTree = "<group>"; };
@@ -92,6 +108,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE5531E91CA2E5BF00871C73 /* Arguments */ = {
+			isa = PBXGroup;
+			children = (
+				BE5531F21CA2E69800871C73 /* KNWACGColorRef.h */,
+				BE5531F31CA2E69800871C73 /* KNWACGColorRef.m */,
+				BE5531F41CA2E69800871C73 /* KNWAUIImage.h */,
+				BE5531F51CA2E69800871C73 /* KNWAUIImage.m */,
+				BE5531EA1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.h */,
+				BE5531EB1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.m */,
+				BE5531EC1CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.h */,
+				BE5531ED1CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.m */,
+			);
+			path = Arguments;
+			sourceTree = "<group>";
+		};
 		BEB2C1341C799EB400FD3DF4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +155,7 @@
 		BEC95E321C32BE7600BA7237 /* KNWTheme */ = {
 			isa = PBXGroup;
 			children = (
+				BE5531E91CA2E5BF00871C73 /* Arguments */,
 				BEC95E331C32BE7600BA7237 /* KNWTheme.h */,
 				BE2A938B1C9CFFC60036E2F8 /* KnightWatson.h */,
 				BE51E4031C40A16B00691F0D /* KNWThemeContext.h */,
@@ -170,8 +202,12 @@
 				BE51E40F1C40A16B00691F0D /* KNWThemeContext.h in Headers */,
 				BEB2C13D1C79ADD900FD3DF4 /* KNWThemedArgument.h in Headers */,
 				BE2A938C1C9CFFC60036E2F8 /* KnightWatson.h in Headers */,
+				BE5531F61CA2E69800871C73 /* KNWACGColorRef.h in Headers */,
 				BE51E4151C40A16B00691F0D /* NSInvocation+KNWTheme.h in Headers */,
+				BE5531EE1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.h in Headers */,
+				BE5531F01CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.h in Headers */,
 				BEB5649F1C5E087700FB7434 /* KNWThemedInvocation.h in Headers */,
+				BE5531F81CA2E69800871C73 /* KNWAUIImage.h in Headers */,
 				BEB2C1301C799CD000FD3DF4 /* KNWArgument.h in Headers */,
 				BE51E40D1C40A16B00691F0D /* KNWThemableObjectProxy.h in Headers */,
 			);
@@ -275,9 +311,13 @@
 			files = (
 				BEB2C13E1C79ADD900FD3DF4 /* KNWThemedArgument.m in Sources */,
 				BEB564A01C5E087700FB7434 /* KNWThemedInvocation.m in Sources */,
+				BE5531F91CA2E69800871C73 /* KNWAUIImage.m in Sources */,
 				BE51E4101C40A16B00691F0D /* KNWThemeContext.m in Sources */,
+				BE5531F71CA2E69800871C73 /* KNWACGColorRef.m in Sources */,
 				BE51E4181C40A16B00691F0D /* NSObject+KNWThemable.m in Sources */,
+				BE5531EF1CA2E5EB00871C73 /* NSArray+KNWObjectArgument.m in Sources */,
 				BE51E4161C40A16B00691F0D /* NSInvocation+KNWTheme.m in Sources */,
+				BE5531F11CA2E5EB00871C73 /* NSDictionary+KNWObjectArgument.m in Sources */,
 				BE51E40E1C40A16B00691F0D /* KNWThemableObjectProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
